@@ -18,7 +18,11 @@ author:
   avatar: /assets/images/avatar.png
   bio: "A place to record my exp or editorial"
 
+toc: true
+toc_sticky: true 
+
 header:
+  image: /assets/images/cover.jpg
   nav:
     - title: Home
       url: /
@@ -26,5 +30,8 @@ header:
       url: /tags/
     - title: About
       url: /about/
+
+sidebar:
+  nav: "docs"
 
 markdown: kramdown
