@@ -1,0 +1,27 @@
+title: Blame's Blog
+description: Blame's Place
+theme: nil
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-feed
+
+paginate: 5
+paginate_path: "/page:num/"
+
+author:
+  name: Blame
+  avatar: /assets/images/avatar.png
+  bio: "A place to record my exp or editorial"
+
+header:
+  nav:
+    - title: Home
+      url: /
+    - title: Tags
+      url: /tags/
+    - title: About
+      url: /about/
