@@ -15,14 +15,10 @@ paginate_path: "/page:num/"
 
 author:
   name: Blame
-  avatar: /assets/images/avatar.png
+  avatar: assets/images/avatar.png
   bio: "A place to record my exp or editorial"
 
-toc: true
-toc_sticky: true 
-
 header:
-  image: /assets/images/cover.jpg
   nav:
     - title: Home
       url: /
