@@ -18,7 +18,7 @@ permalink: /:year:month:day:title
 author:
   name: Blame
   avatar: /assets/images/avatar.png
-  bio: "A place to record my exp or editorial"
+  bio: "一個只會寫心得的競程菜雞"
 
 markdown: kramdown
 kramdown:
