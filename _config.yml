@@ -1,7 +1,6 @@
 title: Blame's Blog
 description: Blame's Place
-theme: nil
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme: minimal-mistakes-jekyll
 
 plugins:
   - jekyll-include-cache
