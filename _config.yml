@@ -28,6 +28,6 @@ header:
       url: /about/
 
 sidebar:
-  nav: "docs"
+  nav: "header"
 
 markdown: kramdown
