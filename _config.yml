@@ -10,7 +10,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
 
-paginate: 5
+paginate: 10
 paginate_path: "/page:num/"
 
 author:
@@ -18,7 +18,7 @@ author:
   avatar: /assets/images/avatar.png
   bio: "A place to record my exp or editorial"
 
+markdown: kramdown
 kramdown:
   math_engine: mathjax
-  syntax_highlighter_opts:
-    block: true
+  math_engine_opts: {}
