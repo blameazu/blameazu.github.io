@@ -18,4 +18,7 @@ author:
   avatar: /assets/images/avatar.png
   bio: "A place to record my exp or editorial"
 
-markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter_opts:
+    block: true
