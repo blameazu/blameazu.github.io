@@ -1,8 +1,10 @@
 title: Blame's Blog
-description: Blame's Place
-theme: minimal-mistakes-jekyll
+description: Hello
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-paginate
   - jekyll-seo-tag
@@ -24,3 +26,5 @@ header:
       url: /tags/
     - title: About
       url: /about/
+
+markdown: kramdown
