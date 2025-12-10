@@ -18,16 +18,4 @@ author:
   avatar: /assets/images/avatar.png
   bio: "A place to record my exp or editorial"
 
-header:
-  nav:
-    - title: Home
-      url: /
-    - title: Tags
-      url: /tags/
-    - title: About
-      url: /about/
-
-sidebar:
-  nav: "header"
-
 markdown: kramdown
