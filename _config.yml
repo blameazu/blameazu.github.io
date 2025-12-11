@@ -32,3 +32,11 @@ header:
       url: /blog/
 
 breadcrumbs: true
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author_profile: true
