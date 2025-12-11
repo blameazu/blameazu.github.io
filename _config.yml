@@ -20,8 +20,8 @@ author:
   avatar: /assets/images/avatar.png
   bio: "一個只會寫心得的競程菜雞"
   links:
-  - label: "文章總覽"
-  url: "/blog/"
+    - label: "文章總覽"
+      url: "/blog/"
 
 markdown: kramdown
 kramdown:
