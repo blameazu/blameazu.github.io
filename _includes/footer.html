@@ -1,0 +1,19 @@
+{% if site.footer.links %}
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    {% for link in site.footer.links %}
+      {% if link.label and link.url %}
+        <li>
+          <a href="{{ link.url }}" rel="nofollow noopener noreferrer">
+            <i class="{{ link.icon | default: 'fas fa-link' }}"></i> {{ link.label }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<div class="page__footer-copyright">
+  © {{ site.time | date: '%Y' }} {{ site.title }}.
+</div>
