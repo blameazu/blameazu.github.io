@@ -322,10 +322,10 @@ $\text{now&rsquo;s } dp_{i-2} \to \text{nxt&rsquo;s } dp_{i-1}$
 T =
 \left[
 \begin{matrix}
-?? &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\
-?? &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\
-?? &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\
-?? &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0\
+?? &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\\
+?? &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\\
+?? &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\\
+?? &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0\\
 ?? &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty
 \end{matrix}
 \right]
@@ -342,10 +342,10 @@ $$</p>
 T =
 \left[
 \begin{matrix}
-\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\
-\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\
-\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\
-\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0\
+\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\\
+\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\\
+\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\\
+\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0\\
 \alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty
 \end{matrix}
 \right]
@@ -377,11 +377,11 @@ $$</p>
 T =
 \left[
 \begin{matrix}
-\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty\
-\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\
-\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\
-\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\
-\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty\
+\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty\\
+\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\\
+\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\\
+\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\\
+\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty\\
 a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0
 \end{matrix}
 \right]
@@ -412,12 +412,12 @@ $$</p>
 T =
 \left[
 \begin{matrix}
-\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_1 \times \beta_i + a_i\
-\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_2 \times \beta_i + a_i\
-\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; \alpha_3 \times \beta_i + a_i\
-\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; \alpha_4 \times \beta_i + a_i\
-\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_5 \times \beta_i + a_i\
-a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; a_i\
+\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_1 \times \beta_i + a_i\\
+\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_2 \times \beta_i + a_i\\
+\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; \alpha_3 \times \beta_i + a_i\\
+\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; \alpha_4 \times \beta_i + a_i\\
+\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_5 \times \beta_i + a_i\\
+a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; a_i\\
 -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0
 \end{matrix}
 \right]
