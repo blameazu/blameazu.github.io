@@ -8,26 +8,7 @@
     
     <meta content="TOJ, Matrix, Math, Dynamic Programming, Solution" name="keywords">
     
-    <meta content="Blame&#39;s Blog - 題目連結 TOJ 1008 速通麥塊
-前言 這題是我出在高一排名賽的防破台題
-因為 brinton 那時候也是高一
-結果卡到他的國培，所以他根本沒打到 哈哈
-然後為啥會寫這篇文
-因為我覺得我出的很好，所以推薦大家寫這題
-阿好題就得配好題解
-所以就來寫這篇了
-看題目 我們可以簡單的看一下題目
-我們可以發現
-有 $N$ 堂課
-每次翹課計畫必定相鄰的兩堂課不超過 $M$ 堂
-然後翹第 $i$ 堂課可以拿到 $a_i$ 開心值
-然後假如第 $k$ 次翹課 ($k \ge 2$)，那可以拿到 $\alpha_{\text{距離堂數}} \times \beta_{i}$
-痾 上面還是基礎定義
-所以我們應該可以知道簡單的 $DP$ 式為
-$$ \displaystyle dp_i = \max(0, \max_{i-m \le j \le i-1} (dp_j) &#43; \alpha_{i-j} \times \beta_{i}) &#43; a_i $$
-然後題目變難了一點點
-第一種操作 是單點更改 $a_i$ 跟 $\beta_i$
-第二種操作 是區間詢問，也就是給你 $l, r$" name="description">
+    <meta content="Blame&#39;s Blog - 防暴雷" name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     

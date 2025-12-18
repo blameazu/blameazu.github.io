@@ -108,19 +108,33 @@ layui.use('element', function(){
 
 <main id="main">
 
-<div class="layui-fluid list-show" >
+<div class="layui-fluid list-show" style="position: relative;" id="haha">
+    <style>
+    #haha::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: url('https://wallpapercave.com/dwp2x/wp14738956.png');  
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: 0.4;
+    }
+    </style>
+    </style>
     <div class="layui-row">
         <div class="layui-col-md6 layui-col-sm12 layui-col-xs12">
             <div class="list-show-title">
-                <h1>These are my blogs</h1>
-                <h2>and also my life</h2>
+                <h1>這裡是 Blog 的總覽</h1>
+                
             </div>
         </div>
-        <div class="layui-col-md6 layui-col-sm12 layui-col-xs12" style="text-align:center;">
-            <img src="/self/img/undraw_chat_bot_kli5.png" class="list-title-pic">
-        </div>
+        
     </div>
+    <br /> <br /> <br /> <br />
 </div>
+
+
 
 <div class="layui-container">
         
@@ -155,13 +169,8 @@ layui.use('element', function(){
 
         <h3>
         	
-				題目 今天有一個簡單無向圖
-$N$ 個節點，$M$ 條邊
-第 $i$ 條邊連接點 $v_i$ 與 $u_i$
-每個節點上都有一盞燈，一開始每盞燈都是關著的
-你可以對每一條邊選擇進行操作
-將第 $i$ 條邊的左右兩節點上面的燈狀態反轉，開 $\to$ 關，關 $\to$ ...
-             <a href="/post/atcoder/abc345f/"><span style="color:#01AAED">Read More</span></a>
+				防暴雷
+			 <a href="/post/atcoder/abc345f/"><span style="color:#01AAED">Read More</span></a>
         </h3>
     </blockquote>
 
