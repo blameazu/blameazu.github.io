@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TOJ on Blame&#39;s Blog</title>
+    <link>http://localhost:1313/tags/toj/</link>
+    <description>Recent content in TOJ on Blame&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Mon, 15 Dec 2025 19:11:14 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/toj/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TOJ 1008 速通麥塊 題解</title>
+      <link>http://localhost:1313/post/hello/toj1008/</link>
+      <pubDate>Mon, 15 Dec 2025 19:11:14 +0800</pubDate>
+      <guid>http://localhost:1313/post/hello/toj1008/</guid>
+      <description>題目連結 TOJ 1008 速通麥塊&#xA;前言 這題是我出在高一排名賽的防破台題&#xA;因為 brinton 那時候也是高一&#xA;結果卡到他的國培，所以他根本沒打到 哈哈&#xA;然後為啥會寫這篇文&#xA;因為我覺得我出的很好，所以推薦大家寫這題&#xA;阿好題就得配好題解&#xA;所以就來寫這篇了&#xA;看題目 我們可以簡單的看一下題目&#xA;我們可以發現&#xA;有 $N$ 堂課&#xA;每次翹課計畫必定相鄰的兩堂課不超過 $M$ 堂&#xA;然後翹第 $i$ 堂課可以拿到 $a_i$ 開心值&#xA;然後假如第 $k$ 次翹課 ($k \ge 2$)，那可以拿到 $\alpha_{\text{距離堂數}} \times \beta_{i}$&#xA;痾 上面還是基礎定義&#xA;所以我們應該可以知道簡單的 $DP$ 式為&#xA;$$ \displaystyle dp_i = \max(0, \max_{i-m \le j \le i-1} (dp_j) + \alpha_{i-j} \times \beta_{i}) + a_i $$&#xA;然後題目變難了一點點&#xA;第一種操作 是單點更改 $a_i$ 跟 $\beta_i$&#xA;第二種操作 是區間詢問，也就是給你 $l, r$</description>
+    </item>
+  </channel>
+</rss>
