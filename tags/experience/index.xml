@@ -10,10 +10,10 @@
     <atom:link href="http://localhost:1313/tags/experience/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2025全國賽心得</title>
-      <link>http://localhost:1313/post/contest/nccu/</link>
+      <link>http://localhost:1313/post/contest/nccu/nccu/</link>
       <pubDate>Sun, 14 Dec 2025 19:11:14 +0800</pubDate>
-      <guid>http://localhost:1313/post/contest/nccu/</guid>
-      <description>title: &amp;ldquo;2025全國賽心得&amp;rdquo; excerpt: &amp;ldquo;決戰 NCCU&amp;rdquo; categories: [心得] tags: [能力競賽] published: true 簡介 全國賽應該是學科能力競賽的最終站&#xA;因為今年我是高三，所以是最後一年可以打&#xA;阿去年有參加，但是打超爛ㄏㄏ&#xA;這篇文是心得也有解題相關資訊&#xA;所以怕暴雷的就不要看 ㄏㄏ&#xA;出發 搭高鐵 早上一大早就起床，跑去沙崙高鐵站搭高鐵&#xA;去 711 買了一個阿薩姆紅茶跟兩團小小的奶油(?)麵包，但塞在書包裡面打算高鐵上吃&#xA;坐著等 paul 跟 brinton 來高鐵站&#xA;然後就一起上高鐵了&#xA;值得一提的是高鐵票因為是早鳥優惠，對號座車票直接減成 800 多，超強&#xA;然後就在高鐵上聊天，看 brinton IOI 破防文 然後就到台北了&#xA;喔然後有講到 brinton 只會寫流水帳&#xA;唉，太菜了吧，我這個心得大師都得搖頭 (雖然這篇應該也是流水帳)&#xA;搭去台大 下台北後我們就轉捷運&#xA;然後在捷運站上 brinton 丟給我一題 arc 的史萊姆題&#xA;不過很快就秒掉了 (大約= 10 min)，剩下的只是實作技巧&#xA;喔 然後在路上有隨機刷新一隻去台大資安面試的dr.dog 超強&#xA;然後就到台大了&#xA;再次表揚 paul 的地圖導航技巧，使我根本不用思考就可以到目的地&#xA;tarjan 講座 在台大逛逛看了美食街(? 也許不是)，找到一家沒開的小木屋鬆餅&#xA;把教室看成廁所差點衝進去上&#xA;然後就跑到了講座的會場&#xA;阿我跟 brinton 是德貞，廁所門是用推的，結果我們都用拉的&amp;hellip;</description>
+      <guid>http://localhost:1313/post/contest/nccu/nccu/</guid>
+      <description>簡介 全國賽應該是學科能力競賽的最終站&#xA;因為今年我是高三，所以是最後一年可以打&#xA;阿去年有參加，但是打超爛ㄏㄏ&#xA;這篇文是心得也有解題相關資訊&#xA;所以怕暴雷的就不要看 ㄏㄏ&#xA;出發 搭高鐵 早上一大早就起床，跑去沙崙高鐵站搭高鐵&#xA;去 711 買了一個阿薩姆紅茶跟兩團小小的奶油(?)麵包，但塞在書包裡面打算高鐵上吃&#xA;坐著等 paul 跟 brinton 來高鐵站&#xA;然後就一起上高鐵了&#xA;值得一提的是高鐵票因為是早鳥優惠，對號座車票直接減成 800 多，超強&#xA;然後就在高鐵上聊天，看 brinton IOI 破防文 然後就到台北了&#xA;喔然後有講到 brinton 只會寫流水帳&#xA;唉，太菜了吧，我這個心得大師都得搖頭 (雖然這篇應該也是流水帳)&#xA;搭去台大 下台北後我們就轉捷運&#xA;然後在捷運站上 brinton 丟給我一題 arc 的史萊姆題&#xA;不過很快就秒掉了 (大約= 10 min)，剩下的只是實作技巧&#xA;喔 然後在路上有隨機刷新一隻去台大資安面試的dr.dog 超強&#xA;然後就到台大了&#xA;再次表揚 paul 的地圖導航技巧，使我根本不用思考就可以到目的地&#xA;tarjan 講座 在台大逛逛看了美食街(? 也許不是)，找到一家沒開的小木屋鬆餅&#xA;把教室看成廁所差點衝進去上&#xA;然後就跑到了講座的會場&#xA;阿我跟 brinton 是德貞，廁所門是用推的，結果我們都用拉的&amp;hellip;&#xA;然後因為太早到會場沒辦法先報到，所以就在門口看他們兩個玩貓戰&#xA;btw 這時候就開始下毛毛雨了&#xA;接著看到 tarjan 進了會場，我們也就跟進去了&#xA;進去找一個感覺很好的位置坐著，然後就等著開講&#xA;阿講座整體內容就是介紹 dijkstra 以及他的一些證明跟優化&#xA;還有一大堆看不懂的資結、演算法、英文單字</description>
     </item>
   </channel>
 </rss>
