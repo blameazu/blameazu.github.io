@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generating Functions on Blame&#39;s Blog</title>
+    <link>http://localhost:1313/tags/generating-functions/</link>
+    <description>Recent content in Generating Functions on Blame&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 02 Jan 2026 08:26:44 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/generating-functions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ABC433 F - 1122 Subsequence 2</title>
+      <link>http://localhost:1313/post/atcoder/abc433f/</link>
+      <pubDate>Fri, 02 Jan 2026 08:26:44 +0800</pubDate>
+      <guid>http://localhost:1313/post/atcoder/abc433f/</guid>
+      <description>題目 定義 字串 $T$ 為一個 11-22 字串需符合以下條件&#xA;$T$ 是一個非空字串，且滿足每個字元皆為數字 $\lvert T \rvert$ 是偶數，$\vert T \vert$ 代表字串 $T$ 的長度，更具體的說 $T$ 的長度為偶數 $T$ 的 $1 \sim \frac{\lvert T \rvert}{2}$ 字元皆相同 $T$ 的 $(\frac{\lvert T \rvert}{2} + 1) \sim \vert T \vert$ 字元皆相同 將第 $1$ 個字元 $+1$ 可以得到最後一位字元，也就是說 $T_1 + 1 = T_{\vert T \vert}$ 今天給你一個由數字組成的字串 $S$，請找出 $S$ 有多少種子序列(不一定連續)符合 11-22 字串&#xA;阿答案很大，要模 $998244353$&#xA;題解 我們可以先分解一下題目，這種題目通常都需要先觀察 + 拆解，歸納為數學模型才能更好的解&#xA;觀察 1 不難發現的發現子序列長度必須為偶數&#xA;猜想 我們可以猜猜看這題的做法&#xA;猜猜看是不是排組</description>
+    </item>
+  </channel>
+</rss>

@@ -3,10 +3,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blame&#39;s Blog - ABC345 F - Many Lamps </title>
+    <title>Blame&#39;s Blog - ABC433 F - 1122 Subsequence 2 </title>
     
     
-    <meta content="Atcoder, Solution" name="keywords">
+    <meta content="Atcoder, Solution, Math, Binomial Coefficients, Generating Functions" name="keywords">
     
     <meta content="Blame&#39;s Blog - 防暴雷" name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -110,8 +110,205 @@ layui.use('element', function(){
             <div class="layui-card single-card">
                 <br />
                 <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
-                    <h1>ABC345 F - Many Lamps</h1>
+                    <h1>ABC433 F - 1122 Subsequence 2</h1>
                     <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-02</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/atcoder/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Atcoder</span>
+        </a>
+    
+        <a href="/tags/solution/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
+        </a>
+    
+        <a href="/tags/math/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
+        </a>
+    
+        <a href="/tags/binomial-coefficients/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Binomial Coefficients</span>
+        </a>
+    
+        <a href="/tags/generating-functions/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Generating Functions</span>
+        </a>
+    
+    
+</h3>
+
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h2 id="題目">題目</h2>
+<p>定義 字串 $T$ 為一個 11-22 字串需符合以下條件</p>
+<ul>
+<li>$T$ 是一個非空字串，且滿足每個字元皆為數字</li>
+<li>$\lvert T \rvert$ 是偶數，$\vert T \vert$ 代表字串 $T$ 的長度，更具體的說 $T$ 的長度為偶數</li>
+<li>$T$ 的 $1 \sim \frac{\lvert T \rvert}{2}$ 字元皆相同</li>
+<li>$T$ 的 $(\frac{\lvert T \rvert}{2} + 1) \sim \vert T \vert$ 字元皆相同</li>
+<li>將第 $1$ 個字元 $+1$ 可以得到最後一位字元，也就是說 $T_1 + 1 = T_{\vert T \vert}$</li>
+</ul>
+<p>今天給你一個由數字組成的字串 $S$，請找出 $S$ 有多少種子序列(不一定連續)符合 11-22 字串</p>
+<p>阿答案很大，要模 $998244353$</p>
+<h2 id="題解">題解</h2>
+<p>我們可以先分解一下題目，這種題目通常都需要先觀察 + 拆解，歸納為數學模型才能更好的解</p>
+<h3 id="觀察-1">觀察 1</h3>
+<p>不難發現的發現子序列長度必須為偶數</p>
+<h3 id="猜想">猜想</h3>
+<p>我們可以猜猜看這題的做法</p>
+<p>猜猜看是不是排組</p>
+<h3 id="分析出式子">分析出式子</h3>
+<p>發現我們可以每次枚舉斷點，也就是子序列中的 $\frac{len}{2}$ 的字元</p>
+<p>怎麼說呢?</p>
+<p>我們可以計算字元 $i$ 可以組成的合法子序列的可能性</p>
+<p>假設目前合法子序列的長度的一半為 $k$</p>
+<p>那麼可能性就為</p>
+<p>$$
+{\binom{count(S_{1 \ldots i}, S_i)}{k-1}} \times {\binom{count(S_{i+1 \ldots \vert S \vert}, S_{i+1})}{k}}
+$$</p>
+<p>看不懂的話，可以理解為</p>
+<p>我們每次選一個東西卡在中間，讓他成為我們這個序列的前半的最後一個字元</p>
+<p>那麼前面一半剩下的選擇就是從 $1 \sim i-1$ 選 $k-1$ 個跟他一樣的字元填上去</p>
+<p>後面一半就是從 $i+1 \sim \vert S \vert$ 選 $k$ 個比他大一的字元填上去</p>
+<h3 id="整理出來了">整理出來了?</h3>
+<p>那麼題目就從原題轉換為求數學式了?</p>
+<p>$$
+\begin{aligned}
+\text{ans} &amp;= \sum_{i=1}^{\vert S \vert} \sum_{k=1}^{\min(A+1, B)} \binom{A}{k-1} \times \binom{B}{k}
+\end{aligned}
+$$</p>
+<p>其中</p>
+<ul>
+<li>$A = count(S_{1 \ldots i-1}, S_i)$</li>
+<li>$B = count(S_{i+1, \ldots \vert S \vert}, S_i+1)$</li>
+</ul>
+<p>我們發現這個式子還有地方怪怪的欸?</p>
+<p>我們要怎麼計算 $count()$ ?</p>
+<h3 id="count">count</h3>
+<p>觀察到這題的計算都為離線</p>
+<p>所以我們可以先對字串做壞壞的事情後再計算</p>
+<p>壞壞的事情? 當然是對他做前綴和阿!!!</p>
+<p>定義一二維前綴和陣列 $pre[c][i]$，代表 $1 \sim i$ 字元中有多少個 $c$</p>
+<p>所以可以得出</p>
+<p>$$
+pre_{c, i} = \begin{cases}
+0 &amp; \text{if } i = 0 \\
+pre_{c, i-1} + [S_i = c] &amp; \text{if } i &gt; 0
+\end{cases}
+$$</p>
+<h3 id="整理一下">整理一下</h3>
+<p>$$
+\begin{aligned}
+\text{ans} &amp;= \sum_{i=1}^{\vert S \vert} \sum_{k=1}^{\min(A+1, B)} \binom{A}{k-1} \times \binom{B}{k}
+\end{aligned}
+$$</p>
+<ul>
+<li>$A = pre_{S_i, i}$</li>
+<li>$B = pre_{S_i+1, \vert S \vert} - pre_{S_i+1, i}$</li>
+</ul>
+<h3 id="蛤-不能暴力做嗎">蛤? 不能暴力做嗎?</h3>
+<p>我們分一下複雜度，假如我們對每個位置 $i$，求每個 $k$ 的東西</p>
+<p>那麼時間複雜度為 $O(N K) = O(N^2)$ 欸</p>
+<p>超級爛QQ</p>
+<h3 id="二項式定理">二項式定理</h3>
+<p>先引入一個定理</p>
+<p>定義函式 $f$ 符合</p>
+<p>$$
+f(x) = (1 + x)^A
+$$</p>
+<p>那麼</p>
+<p>$$
+\sum^{A}_{i = 0} \binom{A}{i} = f(1)
+$$</p>
+<p>也就是我們熟知的<strong>二項式定理</strong></p>
+<h3 id="小定義">小定義</h3>
+<p>我們先定義 $C(n, m)$ 假如 $m &gt; n$ 的話為 $0$</p>
+<p>這樣比較好算</p>
+<p>然後 $\sum$ 不放上界就是定義為無限大</p>
+<h3 id="魔法">魔法</h3>
+<p>我們必須要通靈出一個函式 $p$</p>
+<p>$$
+p(x)
+= \sum_{i = 1} \binom{A}{i-1} x^{i-1}
+= \sum_{i = 0} \binom{A}{i} x^{i}
+= (1 + x)^A
+$$</p>
+<p>也需要通靈出相對應的函式 $q$</p>
+<p>$$
+q(x)
+= \sum_{j = 0} \binom{B}{j} x^{\frac{1}{j-1}}
+= x \cdot (1 + \frac{1}{x})^B
+= \frac{1}{x^{B-1}} \cdot (1 + x)^B
+$$</p>
+<blockquote>
+<p>假如不知道為什麼會這樣變變變的，可以把式子展開看看</p>
+</blockquote>
+<p>觀察一下，發現 $p \times q$ 會超級剛好的變成</p>
+<p>$$
+p(x) \times q(x) = \sum_{i = 0} \sum_{j=0} \binom{A}{i} x^i \times \binom{B}{j} x^{\frac{1}{j-1}} =  (1 + x)^A \cdot (\frac{1}{x^{B-1}} \cdot (1 + x)^B)
+$$</p>
+<p>也就是說 $p \times q$ 出來還會是一個超級好看的多項式</p>
+<p>$$
+p(x) \times q(x) = \frac{1}{x^{B-1}} \cdot (1 + x)^{A+B}
+$$</p>
+<h3 id="將魔法整理">將魔法整理</h3>
+<p>我們發現，當 $i = j-1$ 的時候</p>
+<p>根據多項式乘法，我們會發現 $p(1) \times q(1)$ 的 $x^0$ 項次剛好為我們的答案</p>
+<blockquote>
+<p>一樣把式子展開可以得出</p>
+</blockquote>
+<p>那麼我們既然知道 $(1 + x)^{A+B}$ 代入 $x = 1$ 進去為</p>
+<p>$$
+(1 + 1)^{A+B} = \sum_{i=0} \binom{A+B}{i}
+$$</p>
+<p>那麼我們求 $x^0$ 項次不是就等同於求 $\binom{A+B}{0}$ 嗎?</p>
+<p>對嗎?</p>
+<p>不對!</p>
+<p>我們發現 $p(x) \times q(x)$ 前面還有一個 $\frac{1}{x^{B-1}}$</p>
+<p>所以整體的 $x^0$ 項應為 $(1 + x)^{A+B}$ 的第 $x^{B-1}$ 項!</p>
+<h3 id="最終">最終</h3>
+<p>最終我們得出來了一個超級強的式子</p>
+<p>$$
+\sum_{k = 1} \binom{A}{k-1} \times \binom{B}{k} = \binom{A+B}{B-1} = \binom{A+B}{A+1}
+$$</p>
+<blockquote>
+<p>後面那個變換是因為 $B-1$ 也許會變負數，所以用組合的對稱性變換一下了</p>
+</blockquote>
+<h3 id="結語">結語</h3>
+<p>實作沒有很複雜，所以不放 code 了</p>
+<p>但是剛剛的那些數學推導過程很重要</p>
+<p>因為那就是大家熟知的 <strong>生成函數</strong></p>
+<p>整體的概念就是把東西丟上去多項式去計算</p>
+<p>然後順便提一句，這題在 ABC 那場打完是青題難度</p>
+<p>所以大家特別會數學，不能輸了!!!</p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/atcoder/abc345f/">
+                                <h3 class="">ABC345 F - Many Lamps</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
     <span>2025-12-17</span>
 
@@ -136,141 +333,8 @@ layui.use('element', function(){
     
 </h3>
 
-                </blockquote>
-                <div class="layui-card-body markdown-body single-content">
-                    <h2 id="題目">題目</h2>
-<p>今天有一個簡單無向圖</p>
-<p>$N$ 個節點，$M$ 條邊</p>
-<p>第 $i$ 條邊連接點 $v_i$ 與 $u_i$</p>
-<p>每個節點上都有一盞燈，一開始每盞燈都是關著的</p>
-<p>你可以對每一條邊選擇進行操作</p>
-<ul>
-<li>將第 $i$ 條邊的左右兩節點上面的燈狀態反轉，開 $\to$ 關，關 $\to$ 開</li>
-</ul>
-<p>問你是否可以做到最後有 $K$ 個燈是開著的，假如有請構造出解</p>
-<h2 id="題解">題解</h2>
-<h3 id="性質">性質</h3>
-<p>我們可以先觀察到一個很明顯的性質</p>
-<p>當你對一條邊進行操作時，會有三種狀況</p>
-<ol>
-<li>當左右兩點都未被點亮，則反轉後點亮的燈數 $+ 2$</li>
-<li>當左右兩點都被點亮，則反轉後點亮的燈數 $- 2$</li>
-<li>當左右兩點有一點被點亮、一點沒點亮，則反轉後點亮的燈數不變</li>
-</ol>
-<p>這可以使我們發現 $K$ 為偶數才有可能有解</p>
-<h3 id="將圖轉成樹">將圖轉成樹</h3>
-<p>我們發現圖上反轉操作真的有點麻煩</p>
-<p>我們是否可以將圖用樹來看呢?</p>
-<p>(痾 以下不失一般性的假設圖連通)</p>
-<p>我們發現，當我們構一棵從節點 $1$ 出發的樹</p>
-<p>那麼我們可以盯著它，使用瞪眼法</p>
-<p>發現有一個超酷的性質(<del>要發現才會發現，所以這步 = 通靈</del>)</p>
-<p>當你從一個子樹的匯集點，也就是說樹的內部節點</p>
-<p>有一個性質</p>
-<p>我們能使子樹內的節點都為點亮的燈，但子樹的根無法確定狀態</p>
-<p>這應該很明顯，假設我們現在子樹的根連接著很多個已經做好的子樹</p>
-<p>那麼我們沒有點亮的燈只會處於跟根節點相連的那些子樹的根</p>
-<p>這也許沒到很明顯，我們可以簡單的舉個例子</p>
-<p><img src="/img/Atcoder/abc345f/photo1.png" alt="photo1"></p>
-<p>上圖是根結點與 <strong>一個</strong> 沒點亮的節點連接</p>
-<p>那麼我們可以將那條邊反轉，接著整顆樹就變成全點亮</p>
-<p><img src="/img/Atcoder/abc345f/photo2.png" alt="photo2"></p>
-<p>上面這張圖是說根結點與 <strong>兩個</strong> 沒點亮的節點連接</p>
-<p>那麼我們也是將兩條邊反轉，那麼除了根結點，其他的節點皆被點亮</p>
-<p>所以我們可以得出一個結論</p>
-<ul>
-<li>
-<p>當根結點與 <strong>奇數個</strong> 未點亮的節點相連，則我們可以透過一系列操作，使得整棵樹皆為點亮的節點</p>
-</li>
-<li>
-<p>當根結點與 <strong>偶數個</strong> 未點亮的節點相連，則我們可以透過一系列操作，使得整棵樹除了根結點皆為點亮的節點</p>
-</li>
-</ul>
-<h3 id="證明最優">證明最優</h3>
-<p>蛤? 我們剛剛只導出了我們能構出一棵根結點未知然後其他節點被點亮的樹</p>
-<p>這樣是最佳嗎???</p>
-<p>會不會在其他情況下可以使得根結點也被點亮?</p>
-<p>結論是沒有的，我們可以細說細說</p>
-<p>當 $N$ 個點的樹，被經過一系列操作後</p>
-<p>那麼點亮的個數一定為 $N$ 或者 $N-1$</p>
-<p>那麼根據好久好久得出來的結論</p>
-<blockquote>
-<p>經過一系列操作，點亮的燈數只可能為偶數個</p>
-</blockquote>
-<p>再看一下 $N$ 與 $N-1$，發現當 $N-1$ 可以被操作出來，那麼那個肯定是最佳了，因為 $N$ 個的是奇數，無法被構出!!!</p>
-<p>(以上不專業證明，但我覺得很好理解)</p>
-<p>喔然後不連通的圖你可以稍微思考一下，其實每個連通塊的最佳性都一樣</p>
-<h3 id="k-個">K 個</h3>
-<p>蛤? 但題目要求我們要構出 $K$ 個欸</p>
-<p>我們現在全部都點亮了欸?</p>
-<p>挖，那你肯定沒有記起來我們好久好久之前導出的一個性質</p>
-<blockquote>
-<p>每次點亮個數一定是 +2 or +0 or -2</p>
-</blockquote>
-<p>也就是說，我們可以透過中間值定理(x)</p>
-<p>發現我們能到達最大值 $N$ or $N-1$ 的話</p>
-<p>肯定會經過 $K$!!!</p>
-<p>所以我們只要在構到 $K$ 的情況下結束程式就行!!</p>
-<h3 id="構造方法">構造方法</h3>
-<p>聽了這麼多，根本沒教怎麼構嘛</p>
-<p>年輕人，你太急了</p>
-<p>剛剛說到我們可以將圖轉成樹嘛</p>
-<p>然後又講到我們應該要盡可能的把未點亮的聚集到根結點</p>
-<p>那麼我們可以發現</p>
-<p>簡單的 DFS，當你為目前DFS的子樹的根結點，且連接的點為未點亮，則我們就反轉邊，使它點亮</p>
-<p>那麼簡單的遞迴就可以做出來了 omob</p>
-<p>最後判斷 $K$ 是否有做到即可</p>
-<h3 id="code">code</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">signed</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>	ios<span style="color:#f92672">::</span>sync_with_stdio(false), cin.tie(<span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> n, m, k; cin <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#f92672">&gt;&gt;</span> m <span style="color:#f92672">&gt;&gt;</span> k;
-</span></span><span style="display:flex;"><span>	vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span>pair<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> f(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> m; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> a, b; cin <span style="color:#f92672">&gt;&gt;</span> a <span style="color:#f92672">&gt;&gt;</span> b;
-</span></span><span style="display:flex;"><span>		f[a].push_back({b, i});
-</span></span><span style="display:flex;"><span>		f[b].push_back({a, i});
-</span></span><span style="display:flex;"><span>	}
-</span></span><span style="display:flex;"><span>	vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> tmp(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>	vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span><span style="color:#f92672">&gt;</span> vis(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>	vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> ANS;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">auto</span> dfs <span style="color:#f92672">=</span> [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">auto</span> dfs, <span style="color:#66d9ef">int</span> id) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">void</span> {
-</span></span><span style="display:flex;"><span>		vis[id] <span style="color:#f92672">=</span> true;
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[d, eid] <span style="color:#f92672">:</span> f[id]) <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>vis[d]) {
-</span></span><span style="display:flex;"><span>			dfs(dfs, d);
-</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">if</span>(tmp[d] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> ans <span style="color:#f92672">&lt;</span> k) {
-</span></span><span style="display:flex;"><span>				ans <span style="color:#f92672">-=</span> tmp[id];
-</span></span><span style="display:flex;"><span>				tmp[d] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>				tmp[id] <span style="color:#f92672">^=</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>				ans <span style="color:#f92672">+=</span> tmp[id] <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-</span></span><span style="display:flex;"><span>				ANS.push_back(eid);
-</span></span><span style="display:flex;"><span>			}
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>	};
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>vis[i]) dfs(dfs, i);
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span>(ans <span style="color:#f92672">==</span> k) {
-</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Yes</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>		cout <span style="color:#f92672">&lt;&lt;</span> ANS.size() <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> ANS.size(); i<span style="color:#f92672">++</span>) cout <span style="color:#f92672">&lt;&lt;</span> ANS[i] <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>[i<span style="color:#f92672">==</span>ANS.size()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>];
-</span></span><span style="display:flex;"><span>	} <span style="color:#66d9ef">else</span> cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;No</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>複雜度為 $O(N+M)$</p>
-<h3 id="結語">結語</h3>
-<p>這題超酷，在於找性質跟整理，然後證明最佳</p>
-<p><del>都蠻通靈的</del></p>
-<p>然後也發現，好像難的題目都沒有重在實作，反而重於思考以及觀察</p>
-<p>我還是太弱了，得再認真刷題</p>
-</div>
-            </div>
-        </div>
-
-        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
-            
-            <div class="layui-card single-card">
-                <h2 class="single-title">Relevant Topics</h2>
-                
+                        </blockquote>
+                    </div>
                 	
                     <div style="margin-left: 10px;">
                         <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
@@ -352,6 +416,18 @@ layui.use('element', function(){
     
         <a href="/tags/solution/">
             <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
+        </a>
+    
+        <a href="/tags/math/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
+        </a>
+    
+        <a href="/tags/binomial-coefficients/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Binomial Coefficients</span>
+        </a>
+    
+        <a href="/tags/generating-functions/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Generating Functions</span>
         </a>
     
     
