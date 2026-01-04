@@ -1,5 +1,5 @@
 body {
-    background-color: #f6f8fa!important;
+    background-color: #fafbfc!important;
     font-family: monospace, Helvetica, Tahoma, Arial;
     font: monospace,Helvetica,Tahoma,Arial, PingFang SC,;
     font-display: swap;
@@ -75,6 +75,7 @@ body {
     background-color:#ffffff;
     padding: 30px 10px;
     margin: 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .recent-inner {
@@ -169,7 +170,17 @@ body {
 
 .list-show-title {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.list-show-title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: -1px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -286,8 +297,15 @@ footer {
     padding:15px;
     line-height:22px;
     border-left:4px solid #009688;
-    border-radius:0 2px 2px 0;
-    /* background-color:#f2f2f2 */
+    border-radius:6px;
+    background-color:#f8f9fa !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.self-elem-quote:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
 }
 
 .self-elem-quote-bg-red {border-left-color: #FF5722!important;}

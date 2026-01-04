@@ -42,6 +42,7 @@
 
     <link rel="stylesheet" href="/layui/css/layui.css">
     <link rel="stylesheet" href="/self/css/default.css">
+    <link rel="stylesheet" href="/self/css/dark-mode.css">
     <script src=" /layui/layui.js"></script>
 
     <link rel="stylesheet" async href="/self/css/markdown.min.css">
@@ -52,7 +53,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script></head>
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script>
+    <script src="/self/js/dark-mode.js"></script></head>
 
 <script>
   MathJax = {
@@ -81,6 +83,13 @@
         
 
         
+
+        
+        <li class="layui-nav-item dark-mode-toggle">
+            <a href="javascript:;" onclick="toggleDarkMode()" class="dark-mode-btn" title="Toggle Dark Mode">
+                <i class="layui-icon" id="darkModeIcon" style="font-size: 22px;"></i>
+            </a>
+        </li>
 
         
         <li class="layui-nav-item" id="nav_small">
@@ -155,6 +164,43 @@ body::before {
                     
                     
                             <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+        <a href="/post/tutorial/flow/intro/">
+            <h2 class="">網路流入門</h2>
+        </a>
+        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-04</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/tutorial/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
+        </a>
+    
+        <a href="/tags/flow/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
+        </a>
+    
+    
+</h3>
+
+        <h3>
+        	
+				Flow
+			 <a href="/post/tutorial/flow/intro/"><span style="color:#01AAED">Read More</span></a>
+        </h3>
+    </blockquote>
+
+                    
+                            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
         <a href="/post/atcoder/abc433f/">
             <h2 class="">ABC433 F - 1122 Subsequence 2</h2>
         </a>
@@ -227,6 +273,14 @@ body::before {
     
         <a href="/tags/solution/">
             <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
+        </a>
+    
+        <a href="/tags/dfs/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">DFS</span>
+        </a>
+    
+        <a href="/tags/tree/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tree</span>
         </a>
     
     
@@ -370,12 +424,20 @@ body::before {
                             <span class="layui-badge layui-bg-green" style="margin: 5px">binomial coefficients</span>
                         </a>
                     
+                        <a href="/tags/dfs/">
+                            <span class="layui-badge layui-bg-green" style="margin: 5px">dfs</span>
+                        </a>
+                    
                         <a href="/tags/dynamic-programming/">
                             <span class="layui-badge layui-bg-green" style="margin: 5px">dynamic programming</span>
                         </a>
                     
                         <a href="/tags/experience/">
                             <span class="layui-badge layui-bg-green" style="margin: 5px">experience</span>
+                        </a>
+                    
+                        <a href="/tags/flow/">
+                            <span class="layui-badge layui-bg-green" style="margin: 5px">flow</span>
                         </a>
                     
                         <a href="/tags/generating-functions/">
@@ -396,6 +458,14 @@ body::before {
                     
                         <a href="/tags/toj/">
                             <span class="layui-badge layui-bg-green" style="margin: 5px">toj</span>
+                        </a>
+                    
+                        <a href="/tags/tree/">
+                            <span class="layui-badge layui-bg-green" style="margin: 5px">tree</span>
+                        </a>
+                    
+                        <a href="/tags/tutorial/">
+                            <span class="layui-badge layui-bg-green" style="margin: 5px">tutorial</span>
                         </a>
                     
                 

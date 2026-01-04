@@ -3,21 +3,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Blame&#39;s Blog - Posts </title>
+    <title>Blame&#39;s Blog - 網路流入門 </title>
     
     
-    <meta content="Blame&#39;s Blog" name="keywords">
+    <meta content="Tutorial, Flow" name="keywords">
     
-    <meta content="Blame&#39;s Blog - A website called Blame&#39;s Blog" name="description">
+    <meta content="Blame&#39;s Blog - Flow" name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     
         <link rel="icon" href="/img/logo.jpg">
     
 
-    
-        <link href="/post/index.xml" rel="alternate" type="application/rss&#43;xml" title="Blame&#39;s Blog" />
-        <link href="/post/index.xml" rel="feed" type="application/rss&#43;xml" title="Blame&#39;s Blog" />
     
 
     
@@ -114,41 +111,16 @@ layui.use('element', function(){
 </script>
 
         <div id="content" style="min-height:80%">
-
-<main id="main">
-
-<div class="layui-fluid list-show" style="position: relative;" id="haha">
-    <style>
-    #haha {
-        background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('https://wallpapercave.com/dwp2x/wp14738956.png') center/cover no-repeat;
-        position: relative;
-        overflow: hidden;
-    }
+<div class="layui-container" style="margin-bottom: 10px">
     
-    #haha > .layui-row {
-        position: relative;
-        z-index: 1;
-    }
-    </style>
-    <div class="layui-row">
-        <div class="layui-col-md6 layui-col-sm12 layui-col-xs12">
-            <div class="list-show-title">
-                <h1>這裡是 Blog 的總覽</h1>
-            </div>
-        </div>
-    </div>
-    <br /> <br /> <br />
-</div>
 
-
-
-<div class="layui-container">
-        
-            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-        <a href="/post/tutorial/flow/intro/">
-            <h2 class="">網路流入門</h2>
-        </a>
-        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>網路流入門</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
     <span>2026-01-04</span>
 
@@ -173,19 +145,78 @@ layui.use('element', function(){
     
 </h3>
 
-        <h3>
-        	
-				Flow
-			 <a href="/post/tutorial/flow/intro/"><span style="color:#01AAED">Read More</span></a>
-        </h3>
-    </blockquote>
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h2 id="什麼是網路流">什麼是網路流?</h2>
+<p>在圖論中，用於解決網路(Network) 這種特殊的有向圖的特殊算法。</p>
+<p>阿因為 flow 聽起來很帥、很複雜，所以通常打 OI 的人都會把他丟到很後面才學。</p>
+<p>最近 ioi 說會考一般的流，所以應該要學起來。</p>
+<h2 id="網路流的基礎定義">網路流的基礎定義</h2>
+<p>一張有向圖符合以下性質，我們可以稱之為網路 (Network)</p>
+<ul>
+<li>擁有一個源點 $S$，水量無限大</li>
+<li>擁有一個匯點 $T$</li>
+<li>$S \neq T$</li>
+<li>圖中每條邊皆有權重 $C$，代表著這條管道的上限、容量</li>
+</ul>
+<p>而對於網路 $G$ 來說，流是指一種流通方法，必須滿足以下條件</p>
+<ul>
+<li>每條邊的流量不能大於該條邊的容量，也就是 $f(a, b) \le C(a, b)$</li>
+<li>除了源點 $S$、匯點 $T$ 來說，其他的點應該都要符合進去的流量 = 出去的流量</li>
+</ul>
+<h2 id="網路流可以幹嘛">網路流可以幹嘛?</h2>
+<p>將問題轉換成流模型，通常可以獲得性質，或者可以直接拿 flow 的演算法去解決。</p>
+<p>而且 flow 擁有很多很酷的引理，通常實際應用問題會跟 dp 一樣花樣多變，有時候根本不知道是流問題。</p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/tutorial/flow/intro/">
+                        <h3 class="">網路流入門</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-04</span>
 
     
-            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-        <a href="/post/atcoder/abc433f/">
-            <h2 class="">ABC433 F - 1122 Subsequence 2</h2>
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/tutorial/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
         </a>
-        <h3 style="margin-top:10px; margin-bottom:10px"> 
+    
+        <a href="/tags/flow/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/atcoder/abc433f/">
+                        <h3 class="">ABC433 F - 1122 Subsequence 2</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
     <span>2026-01-02</span>
 
@@ -222,19 +253,15 @@ layui.use('element', function(){
     
 </h3>
 
-        <h3>
-        	
-				防暴雷
-			 <a href="/post/atcoder/abc433f/"><span style="color:#01AAED">Read More</span></a>
-        </h3>
-    </blockquote>
-
-    
-            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-        <a href="/post/atcoder/abc345f/">
-            <h2 class="">ABC345 F - Many Lamps</h2>
-        </a>
-        <h3 style="margin-top:10px; margin-bottom:10px"> 
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/atcoder/abc345f/">
+                        <h3 class="">ABC345 F - Many Lamps</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
     <span>2025-12-17</span>
 
@@ -267,19 +294,15 @@ layui.use('element', function(){
     
 </h3>
 
-        <h3>
-        	
-				防暴雷
-			 <a href="/post/atcoder/abc345f/"><span style="color:#01AAED">Read More</span></a>
-        </h3>
-    </blockquote>
-
-    
-            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-        <a href="/post/toj/toj1008/">
-            <h2 class="">TOJ 1008 速通麥塊</h2>
-        </a>
-        <h3 style="margin-top:10px; margin-bottom:10px"> 
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/toj/toj1008/">
+                        <h3 class="">TOJ 1008 速通麥塊</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
     <span>2025-12-15</span>
 
@@ -316,19 +339,15 @@ layui.use('element', function(){
     
 </h3>
 
-        <h3>
-        	
-				防暴雷
-			 <a href="/post/toj/toj1008/"><span style="color:#01AAED">Read More</span></a>
-        </h3>
-    </blockquote>
-
-    
-            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-        <a href="/post/contest/nccu/nccu/">
-            <h2 class="">2025全國賽心得</h2>
-        </a>
-        <h3 style="margin-top:10px; margin-bottom:10px"> 
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/contest/nccu/nccu/">
+                        <h3 class="">2025全國賽心得</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
     <span>2025-12-14</span>
 
@@ -349,67 +368,16 @@ layui.use('element', function(){
     
 </h3>
 
-        <h3>
-        	
-				決戰NCCU
-			 <a href="/post/contest/nccu/nccu/"><span style="color:#01AAED">Read More</span></a>
-        </h3>
-    </blockquote>
+                    </blockquote>
+                </div>
+                
+            
+            <br />
+            </div>
+        </div>
 
-    
-            <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-        <a href="/post/hello/intro/">
-            <h2 class="">自我介紹</h2>
-        </a>
-        <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2025-12-08</span>
-
-    
-    
-
-    
-
-    
-
-    
-    
-</h3>
-
-        <h3>
-        	
-				稍微講一下這個網站要幹嘛
-			 <a href="/post/hello/intro/"><span style="color:#01AAED">Read More</span></a>
-        </h3>
-    </blockquote>
-
-    
-
-    
-<div class="pager">
-    <div class="layui-btn-group">
-        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
-            <a href="/post/"><i class="layui-icon">&#xe65a;</i></a>
-        </button>
-        
-        <button type="button" class="layui-btn layui-btn-disabled layui-btn-sm">
-            <i class="layui-icon">&#xe603;</i>
-        </button>
-        
-        
-        <button type="button" class="layui-btn layui-btn-disabled layui-btn-sm">
-            <i class="layui-icon">&#xe602;</i>
-        </button>
-        
-        <button type="button" class="layui-btn layui-btn-primary layui-btn-sm">
-            <a href="/post/"><i class="layui-icon">&#xe65b;</i></a>
-        </button>
     </div>
 </div>
-
-</div>
-
-</main>
 
 
         </div><footer>
