@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atcoder on Blame&#39;s Blog</title>
-    <link>http://localhost:1313/tags/atcoder/</link>
+    <link>https://blameazu.github.io/tags/atcoder/</link>
     <description>Recent content in Atcoder on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Fri, 02 Jan 2026 08:26:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blameazu.github.io/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ABC433 F - 1122 Subsequence 2</title>
-      <link>http://localhost:1313/post/atcoder/abc433f/</link>
+      <link>https://blameazu.github.io/post/atcoder/abc433f/</link>
       <pubDate>Fri, 02 Jan 2026 08:26:44 +0800</pubDate>
-      <guid>http://localhost:1313/post/atcoder/abc433f/</guid>
+      <guid>https://blameazu.github.io/post/atcoder/abc433f/</guid>
       <description>題目 定義 字串 $T$ 為一個 11-22 字串需符合以下條件&#xA;$T$ 是一個非空字串，且滿足每個字元皆為數字 $\lvert T \rvert$ 是偶數，$\vert T \vert$ 代表字串 $T$ 的長度，更具體的說 $T$ 的長度為偶數 $T$ 的 $1 \sim \frac{\lvert T \rvert}{2}$ 字元皆相同 $T$ 的 $(\frac{\lvert T \rvert}{2} + 1) \sim \vert T \vert$ 字元皆相同 將第 $1$ 個字元 $+1$ 可以得到最後一位字元，也就是說 $T_1 + 1 = T_{\vert T \vert}$ 今天給你一個由數字組成的字串 $S$，請找出 $S$ 有多少種子序列(不一定連續)符合 11-22 字串&#xA;阿答案很大，要模 $998244353$&#xA;題解 我們可以先分解一下題目，這種題目通常都需要先觀察 + 拆解，歸納為數學模型才能更好的解&#xA;觀察 1 不難發現的發現子序列長度必須為偶數&#xA;猜想 我們可以猜猜看這題的做法&#xA;猜猜看是不是排組</description>
     </item>
     <item>
       <title>ABC345 F - Many Lamps</title>
-      <link>http://localhost:1313/post/atcoder/abc345f/</link>
+      <link>https://blameazu.github.io/post/atcoder/abc345f/</link>
       <pubDate>Wed, 17 Dec 2025 19:11:14 +0800</pubDate>
-      <guid>http://localhost:1313/post/atcoder/abc345f/</guid>
+      <guid>https://blameazu.github.io/post/atcoder/abc345f/</guid>
       <description>題目 今天有一個簡單無向圖&#xA;$N$ 個節點，$M$ 條邊&#xA;第 $i$ 條邊連接點 $v_i$ 與 $u_i$&#xA;每個節點上都有一盞燈，一開始每盞燈都是關著的&#xA;你可以對每一條邊選擇進行操作&#xA;將第 $i$ 條邊的左右兩節點上面的燈狀態反轉，開 $\to$ 關，關 $\to$ 開 問你是否可以做到最後有 $K$ 個燈是開著的，假如有請構造出解&#xA;題解 性質 我們可以先觀察到一個很明顯的性質&#xA;當你對一條邊進行操作時，會有三種狀況&#xA;當左右兩點都未被點亮，則反轉後點亮的燈數 $+ 2$ 當左右兩點都被點亮，則反轉後點亮的燈數 $- 2$ 當左右兩點有一點被點亮、一點沒點亮，則反轉後點亮的燈數不變 這可以使我們發現 $K$ 為偶數才有可能有解&#xA;將圖轉成樹 我們發現圖上反轉操作真的有點麻煩&#xA;我們是否可以將圖用樹來看呢?&#xA;(痾 以下不失一般性的假設圖連通)&#xA;我們發現，當我們構一棵從節點 $1$ 出發的樹&#xA;那麼我們可以盯著它，使用瞪眼法&#xA;發現有一個超酷的性質(要發現才會發現，所以這步 = 通靈)&#xA;當你從一個子樹的匯集點，也就是說樹的內部節點&#xA;有一個性質&#xA;我們能使子樹內的節點都為點亮的燈，但子樹的根無法確定狀態&#xA;這應該很明顯，假設我們現在子樹的根連接著很多個已經做好的子樹&#xA;那麼我們沒有點亮的燈只會處於跟根節點相連的那些子樹的根&#xA;這也許沒到很明顯，我們可以簡單的舉個例子&#xA;上圖是根結點與 一個 沒點亮的節點連接&#xA;那麼我們可以將那條邊反轉，接著整顆樹就變成全點亮&#xA;上面這張圖是說根結點與 兩個 沒點亮的節點連接&#xA;那麼我們也是將兩條邊反轉，那麼除了根結點，其他的節點皆被點亮&#xA;所以我們可以得出一個結論&#xA;當根結點與 奇數個 未點亮的節點相連，則我們可以透過一系列操作，使得整棵樹皆為點亮的節點&#xA;當根結點與 偶數個 未點亮的節點相連，則我們可以透過一系列操作，使得整棵樹除了根結點皆為點亮的節點</description>
     </item>
   </channel>
