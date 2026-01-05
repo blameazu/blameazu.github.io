@@ -6,14 +6,21 @@
     <description>Recent content in Tutorial on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 04 Jan 2026 20:02:27 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Jan 2026 14:05:39 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Intro</title>
+      <title>Flow Algorithm</title>
+      <link>http://localhost:1313/post/tutorial/flow/flow-algorithm/</link>
+      <pubDate>Mon, 05 Jan 2026 14:05:39 +0800</pubDate>
+      <guid>http://localhost:1313/post/tutorial/flow/flow-algorithm/</guid>
+      <description>目的 這篇來介紹怎麼使用演算法來解決 最大流問題&#xA;Fulkerson Ford 方法 這是一種方法，不是一種演算法!&#xA;Fulkerson Ford 告訴你，當你每次找一條增廣路(邊上流量都是正數的流)&#xA;假設該條的流量瓶頸(最小的那一個) 為 $f_i$&#xA;那麼最大流量的值就為 $\sum f_i$&#xA;但前提條件是我們要將每一條找出來的增廣路做反向邊&#xA;也就是說當我們走過一條 $(u, v)$，流量 為 $f$ 的邊&#xA;則我們需要創建一條 $(v, u)$，容量 為 $f$ 的邊&#xA;為什麼要這麼做呢?&#xA;我們可以感性理解一下，把它想像成一種 greedy 的體現方法&#xA;當我走過那條邊的時候，我可以反著逆回去，把水流推回去&#xA;也就是說我們允許之後可以將我們當前的操作逆轉回去&#xA;痾 關於建反邊的實例&#xA;一開始有 $u \to v$，容量為 $7$&#xA;反向邊長這樣&#xA;然後流過去流量 $3$ 的時候會長這樣子&#xA;好那麼這樣我們就講完 Fulkerson Ford 的觀念了!&#xA;時間複雜度的話 $O(F \text{搜尋時間})$&#xA;$F$ 是流大小，搜尋時間通常為 $E$ 因為用 BFS、DFS&#xA;Edmonds Karp 演算法 這是基於剛剛所說的 Fulkerson Ford 的一種實作版本&#xA;搜尋方法採用 BFS&#xA;簡單的做法就如下:&#xA;用 BFS 找一條最短的增廣路徑($F &amp;gt; 0$) 將他加到答案中，(因為答案等於 $\sum F$) 建整條流的反向邊 這樣就做完了!</description>
+    </item>
+    <item>
+      <title>網路流入門</title>
       <link>http://localhost:1313/post/tutorial/flow/intro/</link>
       <pubDate>Sun, 04 Jan 2026 20:02:27 +0800</pubDate>
       <guid>http://localhost:1313/post/tutorial/flow/intro/</guid>
-      <description>介紹 </description>
+      <description>什麼是網路流? 在圖論中，用於解決網路(Network) 這種特殊的有向圖的特殊算法。&#xA;阿因為 flow 聽起來很帥、很複雜，所以通常打 OI 的人都會把他丟到很後面才學。&#xA;最近 IOI 說會考一般的流，所以應該要學起來。&#xA;網路流的基礎定義 一張有向圖符合以下性質，我們可以稱之為網路 (Network)&#xA;擁有一個源點 $S$，水量無限大 擁有一個匯點 $T$ $S \neq T$ 圖中每條邊皆有非負權重 $C$，代表著這條管道的上限、容量 我們可以想像這張圖上的邊為水管，而點是他們的交會處。&#xA;那麼水管必定有他的上限，且水管中的水不一定會流滿。&#xA;源點就是水龍頭的源頭，會一直冒水。&#xA;匯點就是你家浴室的排水孔，水進去就流走了。&#xA;然後根據質量守恆定律(?)，水不會憑空消失，所以除了源點、匯點外，不應該要有水憑空出現/消失。&#xA;阿我們所想要知道的就是要怎麼安排一種流法，使得他們在流水的時候達到最佳&#xA;更明確的定義應該如下:&#xA;對於網路 $G$ 來說，流是指一種流通方法，必須滿足以下條件&#xA;每條邊的流量不能大於該條邊的容量，也就是 $f(a, b) \le C(a, b)$ 除了源點 $S$、匯點 $T$ 來說，其他的點應該都要符合進去的流量 = 出去的流量 源點只有出邊，匯點只有入邊 網路流可以幹嘛? 將問題轉換成流模型，通常可以獲得性質，或者可以直接拿 flow 的演算法去解決。&#xA;而且 flow 擁有很多很酷的引理，通常實際應用問題會跟 dp 一樣花樣多變，有時候根本不知道是流問題。&#xA;最大流 最大流的定義是在上述幾個流的規則中(容量限制、水量守恆下)，匯點可以收集到最大的水量的一種設計流量方法。&#xA;我們就稱之為最大流。&#xA;所以有時會有很多種方法皆為最大流。</description>
     </item>
   </channel>
 </rss>

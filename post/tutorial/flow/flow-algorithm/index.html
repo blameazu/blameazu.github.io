@@ -1,0 +1,547 @@
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blame&#39;s Blog - Flow Algorithm </title>
+    
+    
+    <meta content="Tutorial, Flow" name="keywords">
+    
+    <meta content="Blame&#39;s Blog - Fulkerson Ford &amp; Edmonds Karp" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+        <link rel="icon" href="/img/logo.jpg">
+    
+
+    
+
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["TeX"] }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <link rel="stylesheet" href="/self/css/dark-mode.css">
+    <script src=" /layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script>
+    <script src="/self/js/dark-mode.js"></script></head>
+
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: {'[+]': [['$', '$']]}
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-svg.js"></script>
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="/img/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Blame&#39;s Blog
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+
+        
+        <li class="layui-nav-item dark-mode-toggle">
+            <a href="javascript:;" onclick="toggleDarkMode()" class="dark-mode-btn" title="Toggle Dark Mode">
+                <i class="layui-icon" id="darkModeIcon" style="font-size: 22px;"></i>
+            </a>
+        </li>
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
+                    <h1>Flow Algorithm</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-05</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/tutorial/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
+        </a>
+    
+        <a href="/tags/flow/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
+        </a>
+    
+    
+</h3>
+
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <h2 id="目的">目的</h2>
+<p>這篇來介紹怎麼使用演算法來解決 最大流問題</p>
+<h2 id="fulkerson-ford-方法">Fulkerson Ford 方法</h2>
+<p>這是一種方法，不是一種演算法!</p>
+<p>Fulkerson Ford 告訴你，當你每次找一條增廣路(邊上流量都是正數的流)</p>
+<p>假設該條的流量瓶頸(最小的那一個) 為 $f_i$</p>
+<p>那麼最大流量的值就為 $\sum f_i$</p>
+<p>但前提條件是我們要將每一條找出來的增廣路做反向邊</p>
+<p>也就是說當我們走過一條 $(u, v)$，<strong>流量</strong> 為 $f$ 的邊</p>
+<p>則我們需要創建一條 $(v, u)$，<strong>流量</strong> 為 $f$ 的邊</p>
+<p>為什麼要這麼做呢?</p>
+<p>我們可以感性理解一下，把它想像成一種 greedy 的體現方法</p>
+<p>當我走過那條邊的時候，我可以反著逆回去，把水流推回去</p>
+<p>也就是說我們允許之後可以將我們當前的操作逆轉回去</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>好那麼這樣我們就講完 Fulkerson Ford 的觀念了!</p>
+<p>時間複雜度的話 $O(F \text{搜尋時間})$</p>
+<p>$F$ 是流大小，搜尋時間通常為 $E$ 因為用 BFS、DFS</p>
+<h2 id="edmonds-karp-演算法">Edmonds Karp 演算法</h2>
+<p>這是基於剛剛所說的 Fulkerson Ford 的一種實作版本</p>
+<p>搜尋方法採用 BFS</p>
+<p>簡單的做法就如下:</p>
+<ol>
+<li>用 BFS 找一條最短的增廣路徑($F &gt; 0$)</li>
+<li>將他加到答案中，(因為答案等於 $\sum F$)</li>
+<li>建整條流的反向邊</li>
+</ol>
+<p>這樣就做完了!</p>
+<p>複雜度為 $O(V E^2)$</p>
+<p>簡單來講就是每條邊最多會被當作 $V$ 次的瓶頸邊</p>
+<p>總共有 $E$ 條邊，所以就是 $O(VE)$</p>
+<p>然後再乘上每次搜尋的時間 $O(V + E) = O(E)$</p>
+<p>所以是 $O(V E^2)$</p>
+<p>至於為什麼每條邊最多只會被當 $V$ 次瓶頸邊呢?</p>
+<p>我們不妨先假設整張圖權重皆為 $1$</p>
+<p>接著我們可以先簡單地知道一下</p>
+<p>我們會走到 $u \to v$ 的這條反向邊</p>
+<p>必定是 $dis&rsquo;[u] &gt; dis[v] + 1$</p>
+<p>也就是說當 $dis[v] = dis[u] + 1$</p>
+<p>所以是 $dis&rsquo;[u] &gt; dis[u] + 2$</p>
+<p>所以最多只會增長 $V$ 次(因為 dis 最多 $N$ 個)</p>
+<p>有權重應該差不多</p>
+<h2 id="實作">實作</h2>
+<p>對於演算法來講，實作肯定是最重要的部分</p>
+<h3 id="建邊">建邊</h3>
+<p>首先我們要先知道怎麼建邊</p>
+<p>為了應對重邊的問題，所以我們就不採用鄰接矩陣喔</p>
+<p>假如邊 $E$ 為 $u \to v$，容量為 $C$，流量為 $0$</p>
+<p>那麼定義 邊 $E \oplus 1$ 為 $v \to u$，容量為 $C$，流量為 $0$</p>
+<p>這樣定義有一個好處</p>
+<p>當我們在 $A$ 這個點的串接矩陣中塞的是邊的編號</p>
+<p>那麼當我們在逆推的時候會特別輕鬆就知道反向邊是哪一條</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> G(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">// 圖，串接矩陣，裡面塞的是邊的編號
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>vector<span style="color:#f92672">&lt;</span>array<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, <span style="color:#ae81ff">3</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&gt;</span> edges; <span style="color:#75715e">// 邊(u-&gt;v), v, c, f
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add_edge</span>(<span style="color:#66d9ef">int</span> u, <span style="color:#66d9ef">int</span> v, <span style="color:#66d9ef">int</span> c) {
+</span></span><span style="display:flex;"><span>    edges.push_back({v, c, <span style="color:#ae81ff">0</span>});
+</span></span><span style="display:flex;"><span>    G[u].push_back(edges.size()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    edges.push_back({u, c, <span style="color:#ae81ff">0</span>});
+</span></span><span style="display:flex;"><span>    G[v].push_back(edges.size()<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="bfs">BFS</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> dis(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">// 從 s 來的最大流量是多少
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> fr(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>); <span style="color:#75715e">// 紀錄用哪條邊來的
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">bfs</span>(<span style="color:#66d9ef">int</span> s, <span style="color:#66d9ef">int</span> t) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        dis[i] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span>inf; <span style="color:#75715e">// inf 是無限大，看你爽設什麼就設什麼
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    dis[s] <span style="color:#f92672">=</span> inf;
+</span></span><span style="display:flex;"><span>    queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> qq;
+</span></span><span style="display:flex;"><span>    qq.push(s);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(qq.size()) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> u <span style="color:#f92672">=</span> qq.front(); qq.pop();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>id : G[u]) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">auto</span> [v, c, f] <span style="color:#f92672">=</span> edges[id];
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span>(min(dis[u], c<span style="color:#f92672">-</span>f) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e">// 走過去流量需要 &gt; 0
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                dis[v] <span style="color:#f92672">=</span> min(dis[u], c<span style="color:#f92672">-</span>f);
+</span></span><span style="display:flex;"><span>                fr[v] <span style="color:#f92672">=</span> id;
+</span></span><span style="display:flex;"><span>                qq.push(v);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(dis[t] <span style="color:#f92672">==</span> <span style="color:#f92672">-</span>inf) <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 走不到 t
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> dis[t];
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="主功能逆推邊">主功能(逆推邊)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#75715e">// 最大流
+</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">while</span>(true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> re <span style="color:#f92672">=</span> bfs(s, t);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span>(re <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    ans <span style="color:#f92672">+=</span> re;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> now <span style="color:#f92672">=</span> t;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(now <span style="color:#f92672">!=</span> s) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[v, c, f] <span style="color:#f92672">=</span> edges[fr[now]]; <span style="color:#75715e">// 去的邊
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[u, C, F] <span style="color:#f92672">=</span> edges[fr[now]<span style="color:#f92672">^</span><span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// 反向邊
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        f <span style="color:#f92672">+=</span> re;
+</span></span><span style="display:flex;"><span>        F <span style="color:#f92672">+=</span> re;
+</span></span><span style="display:flex;"><span>        now <span style="color:#f92672">=</span> u;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="code-實作速度提升">code 實作速度提升</h3>
+<p>因為我們打扣要快，所以通常會將 c, f 合併在一起處理</p>
+<p>但是 code 的可看性就降低許多(?)</p>
+<p>但這邊只是說一下我們通常會直接將 $C-F$ 丟進去變成一個數字，也就是我們存剩餘用量而已</p>
+<h2 id="性質">性質</h2>
+<p>當然，不是學到這邊就可以解所有的 flow 的題目</p>
+<p>你還要學一些酷酷的性質</p>
+<h3 id="最小點覆蓋與最大流">最小點覆蓋與最大流</h3>
+<p><strong>Konig 定理</strong> 跟你說</p>
+<p>最小點覆蓋 = 最大流</p>
+<h3 id="最小鏈覆蓋與最大流">最小鏈覆蓋與最大流</h3>
+<p>當每條鏈的節點不可重複時</p>
+<p>則最小鏈覆蓋 = $N-\text{最大流}$</p>
+<p>當節點可重複時</p>
+<p>最小鏈覆蓋也是 = $N-\text{最大流}$</p>
+<p>但是那個最大流的圖要重構一下</p>
+<p>當一個 $a$ 點間接 or 直接可以走到 $b$</p>
+<p>則建邊 $a \to b$</p>
+<h3 id="dilworth">dilworth</h3>
+<p>最大反鏈 = 最小鏈覆蓋(點可以重複)</p>
+<p>這個我也搞不清楚他在說什麼，可以去問 brinton</p>
+<p>經典反鏈應該是 LIS &amp; LDS</p>
+<h2 id="題目">題目</h2>
+<p><a href="https://cses.fi/problemset/task/1694">CSES 1694 Download Speed</a></p>
+<p><a href="https://cses.fi/problemset/task/1695">CSES 1695 Police Chase</a></p>
+<p><a href="https://cses.fi/problemset/task/1696">CSES 1696 School Dance</a></p>
+<p><a href="https://cses.fi/problemset/task/1711">CSES 1711 Distinct Routes</a></p>
+<p><a href="https://toj.tfcis.org/oj/pro/287/">TOJ 287 俄羅斯娃娃</a></p>
+<p><a href="https://tioj.infor.org/problems/1253">TIOJ 1253 砲打皮皮</a></p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/tutorial/flow/intro/">
+                                <h3 class="">網路流入門</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-04</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/tutorial/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
+        </a>
+    
+        <a href="/tags/flow/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/tutorial/flow/flow-algorithm/">
+                        <h3 class="">Flow Algorithm</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-05</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/tutorial/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
+        </a>
+    
+        <a href="/tags/flow/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/tutorial/flow/intro/">
+                        <h3 class="">網路流入門</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-04</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/tutorial/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
+        </a>
+    
+        <a href="/tags/flow/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/atcoder/abc433f/">
+                        <h3 class="">ABC433 F - 1122 Subsequence 2</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2026-01-02</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/atcoder/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Atcoder</span>
+        </a>
+    
+        <a href="/tags/solution/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
+        </a>
+    
+        <a href="/tags/math/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
+        </a>
+    
+        <a href="/tags/binomial-coefficients/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Binomial Coefficients</span>
+        </a>
+    
+        <a href="/tags/generating-functions/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Generating Functions</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/atcoder/abc345f/">
+                        <h3 class="">ABC345 F - Many Lamps</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2025-12-17</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/atcoder/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Atcoder</span>
+        </a>
+    
+        <a href="/tags/solution/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
+        </a>
+    
+        <a href="/tags/dfs/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">DFS</span>
+        </a>
+    
+        <a href="/tags/tree/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tree</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/toj/toj1008/">
+                        <h3 class="">TOJ 1008 速通麥塊</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2025-12-15</span>
+
+    
+    
+
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/toj/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">TOJ</span>
+        </a>
+    
+        <a href="/tags/matrix/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Matrix</span>
+        </a>
+    
+        <a href="/tags/math/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
+        </a>
+    
+        <a href="/tags/dynamic-programming/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Dynamic Programming</span>
+        </a>
+    
+        <a href="/tags/solution/">
+            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>
