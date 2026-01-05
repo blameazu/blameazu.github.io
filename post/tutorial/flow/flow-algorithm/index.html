@@ -147,8 +147,25 @@ layui.use('element', function(){
 
                 </blockquote>
                 <div class="layui-card-body markdown-body single-content">
-                    <h2 id="目的">目的</h2>
+                    <h2 id="前言">前言</h2>
 <p>這篇來介紹怎麼使用演算法來解決 最大流問題</p>
+<h2 id="先備知識">先備知識</h2>
+<p>知道 flow 是啥</p>
+<p>知道 flow 在圖上大概長怎樣</p>
+<h3 id="管道逆流">管道逆流</h3>
+<p>等等會提到一個很關鍵的步驟是管道逆流</p>
+<p>也就是說當有一條水管 $u \to v$</p>
+<p>被流過去 $f$ 這條水量時</p>
+<p>我們允許 $v \to u$ 多逆流回去 $f$</p>
+<p>而詳細的操作應該是</p>
+<p>當有一條容量為 $C$ 的水管 $u \to v, v \to u$</p>
+<p>那麼當 $u \to v$ 是 $A$，$v \to u$ 是 $B$ 時</p>
+<p>當 $u \to v$ 多流 $x$ 的時候， $v \to u$ 應該就要減少流量 $x$</p>
+<p>這樣就確保 $\vert A - B \vert \le C$</p>
+<p><img src="/img/Tutorial/Flow/flow-algorithm/photo1.png" alt="photo1"></p>
+<p><img src="/img/Tutorial/Flow/flow-algorithm/photo2.png" alt="photo2"></p>
+<p><img src="/img/Tutorial/Flow/flow-algorithm/photo3.png" alt="photo3"></p>
+<p><img src="/img/Tutorial/Flow/flow-algorithm/photo4.png" alt="photo4"></p>
 <h2 id="fulkerson-ford-方法">Fulkerson Ford 方法</h2>
 <p>這是一種方法，不是一種演算法!</p>
 <p>Fulkerson Ford 告訴你，當你每次找一條增廣路(邊上流量都是正數的流)</p>
@@ -161,8 +178,6 @@ layui.use('element', function(){
 <p>我們可以感性理解一下，把它想像成一種 greedy 的體現方法</p>
 <p>當我走過那條邊的時候，我可以反著逆回去，把水流推回去</p>
 <p>也就是說我們允許之後可以將我們當前的操作逆轉回去</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 <p>好那麼這樣我們就講完 Fulkerson Ford 的觀念了!</p>
 <p>時間複雜度的話 $O(F \text{搜尋時間})$</p>
 <p>$F$ 是流大小，搜尋時間通常為 $E$ 因為用 BFS、DFS</p>
@@ -243,7 +258,7 @@ layui.use('element', function(){
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[v, c, f] <span style="color:#f92672">=</span> edges[fr[now]]; <span style="color:#75715e">// 去的邊
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>[u, C, F] <span style="color:#f92672">=</span> edges[fr[now]<span style="color:#f92672">^</span><span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// 反向邊
 </span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        f <span style="color:#f92672">+=</span> re;
-</span></span><span style="display:flex;"><span>        F <span style="color:#f92672">+=</span> re;
+</span></span><span style="display:flex;"><span>        F <span style="color:#f92672">-=</span> re;
 </span></span><span style="display:flex;"><span>        now <span style="color:#f92672">=</span> u;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
@@ -256,6 +271,7 @@ layui.use('element', function(){
 <p>你還要學一些酷酷的性質</p>
 <h3 id="最小點覆蓋與最大流">最小點覆蓋與最大流</h3>
 <p><strong>Konig 定理</strong> 跟你說</p>
+<p>對於二分圖上</p>
 <p>最小點覆蓋 = 最大流</p>
 <h3 id="最小鏈覆蓋與最大流">最小鏈覆蓋與最大流</h3>
 <p>當每條鏈的節點不可重複時</p>

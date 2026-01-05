@@ -13,7 +13,7 @@
       <link>http://localhost:1313/post/tutorial/flow/flow-algorithm/</link>
       <pubDate>Mon, 05 Jan 2026 14:05:39 +0800</pubDate>
       <guid>http://localhost:1313/post/tutorial/flow/flow-algorithm/</guid>
-      <description>目的 這篇來介紹怎麼使用演算法來解決 最大流問題&#xA;Fulkerson Ford 方法 這是一種方法，不是一種演算法!&#xA;Fulkerson Ford 告訴你，當你每次找一條增廣路(邊上流量都是正數的流)&#xA;假設該條的流量瓶頸(最小的那一個) 為 $f_i$&#xA;那麼最大流量的值就為 $\sum f_i$&#xA;但前提條件是我們要將每一條找出來的增廣路做反向邊&#xA;也就是說當我們走過一條 $(u, v)$，流量 為 $f$ 的邊&#xA;則我們需要創建一條 $(v, u)$，流量 為 $f$ 的邊&#xA;為什麼要這麼做呢?&#xA;我們可以感性理解一下，把它想像成一種 greedy 的體現方法&#xA;當我走過那條邊的時候，我可以反著逆回去，把水流推回去&#xA;也就是說我們允許之後可以將我們當前的操作逆轉回去&#xA;好那麼這樣我們就講完 Fulkerson Ford 的觀念了!&#xA;時間複雜度的話 $O(F \text{搜尋時間})$&#xA;$F$ 是流大小，搜尋時間通常為 $E$ 因為用 BFS、DFS&#xA;Edmonds Karp 演算法 這是基於剛剛所說的 Fulkerson Ford 的一種實作版本&#xA;搜尋方法採用 BFS&#xA;簡單的做法就如下:&#xA;用 BFS 找一條最短的增廣路徑($F &amp;gt; 0$) 將他加到答案中，(因為答案等於 $\sum F$) 建整條流的反向邊 這樣就做完了!&#xA;複雜度為 $O(V E^2)$</description>
+      <description>前言 這篇來介紹怎麼使用演算法來解決 最大流問題&#xA;先備知識 知道 flow 是啥&#xA;知道 flow 在圖上大概長怎樣&#xA;管道逆流 等等會提到一個很關鍵的步驟是管道逆流&#xA;也就是說當有一條水管 $u \to v$&#xA;被流過去 $f$ 這條水量時&#xA;我們允許 $v \to u$ 多逆流回去 $f$&#xA;而詳細的操作應該是&#xA;當有一條容量為 $C$ 的水管 $u \to v, v \to u$&#xA;那麼當 $u \to v$ 是 $A$，$v \to u$ 是 $B$ 時&#xA;當 $u \to v$ 多流 $x$ 的時候， $v \to u$ 應該就要減少流量 $x$&#xA;這樣就確保 $\vert A - B \vert \le C$&#xA;Fulkerson Ford 方法 這是一種方法，不是一種演算法!</description>
     </item>
     <item>
       <title>網路流入門</title>
