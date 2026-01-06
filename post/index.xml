@@ -2,59 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Blame&#39;s Blog</title>
-    <link>https://blameazu.github.io/post/</link>
+    <link>http://localhost:1313/post/</link>
     <description>Recent content in Posts on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 05 Jan 2026 14:05:39 +0800</lastBuildDate>
-    <atom:link href="https://blameazu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jan 2026 10:25:49 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ABC168 E - ∙ (Bullet)</title>
+      <link>http://localhost:1313/post/atcoder/abc168e/</link>
+      <pubDate>Tue, 06 Jan 2026 10:25:49 +0800</pubDate>
+      <guid>http://localhost:1313/post/atcoder/abc168e/</guid>
+      <description>題目 今天有 $N$ 個沙丁魚要放進去冰箱裡面&#xA;定義 丁魚 $i$ 與 丁魚 $j$ 會吵架是 $A_i \times A_j + B_i \times B_j = 0$&#xA;你需要求出有多少種放法，使得放在冰箱裡的丁魚們之間無任意兩者會吵架&#xA;冰箱裡至少需要放 $1$ 隻&#xA;題解 觀察 這題假如有學過高中數學的向量單元，應該可以很輕易地看出來 $A_i \times A_j + B_i \times B_j$ 很像內積&#xA;所以我們可以假設每個沙丁魚的 $(A_i, B_i)$ 為二維平面上面的座標向量&#xA;那麼我們就可以知道，當兩隻沙丁魚會吵架&#xA;那麼必定是他們與原點的方向向量垂直!!!&#xA;轉換為數學模型 所以我們就先把相互垂直的直線綁在一起看!&#xA;我們會發現除了這兩個互相垂直的直線&#xA;其他的直線與他們是沒有關聯的&#xA;所以答案就是每一組的答案相乘&#xA;那麼我們仔細看每一組自己本身的答案是多少&#xA;假設直線 $L$ 擁有 $A$ 個點&#xA;直線 $L&amp;rsquo;$ 擁有 $B$ 個點&#xA;那麼答案很明顯是&#xA;$$ C^A_1 + C^A_2 + \ldots + C^A_A + C^B_1 + C^B_2 + \ldots + C^B_B + 1 $$</description>
+    </item>
     <item>
       <title>Flow Algorithm</title>
-      <link>https://blameazu.github.io/post/tutorial/flow/flow-algorithm/</link>
+      <link>http://localhost:1313/post/tutorial/flow/flow-algorithm/</link>
       <pubDate>Mon, 05 Jan 2026 14:05:39 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/tutorial/flow/flow-algorithm/</guid>
+      <guid>http://localhost:1313/post/tutorial/flow/flow-algorithm/</guid>
       <description>前言 這篇來介紹怎麼使用演算法來解決 最大流問題&#xA;先備知識 知道 flow 是啥&#xA;知道 flow 在圖上大概長怎樣&#xA;管道逆流 等等會提到一個很關鍵的步驟是管道逆流&#xA;也就是說當有一條水管 $u \to v$&#xA;被流過去 $f$ 這條水量時&#xA;我們允許 $v \to u$ 多逆流回去 $f$&#xA;而詳細的操作應該是&#xA;當有一條容量為 $C$ 的水管 $u \to v, v \to u$&#xA;那麼當 $u \to v$ 是 $A$，$v \to u$ 是 $B$ 時&#xA;當 $u \to v$ 多流 $x$ 的時候， $v \to u$ 應該就要減少流量 $x$&#xA;這樣就確保 $\vert A - B \vert \le C$&#xA;Fulkerson Ford 方法 這是一種方法，不是一種演算法!</description>
     </item>
     <item>
       <title>網路流入門</title>
-      <link>https://blameazu.github.io/post/tutorial/flow/intro/</link>
+      <link>http://localhost:1313/post/tutorial/flow/intro/</link>
       <pubDate>Sun, 04 Jan 2026 20:02:27 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/tutorial/flow/intro/</guid>
+      <guid>http://localhost:1313/post/tutorial/flow/intro/</guid>
       <description>什麼是網路流? 在圖論中，用於解決網路(Network) 這種特殊的有向圖的特殊算法。&#xA;阿因為 flow 聽起來很帥、很複雜，所以通常打 OI 的人都會把他丟到很後面才學。&#xA;最近 IOI 說會考一般的流，所以應該要學起來。&#xA;網路流的基礎定義 一張有向圖符合以下性質，我們可以稱之為網路 (Network)&#xA;擁有一個源點 $S$，水量無限大 擁有一個匯點 $T$ $S \neq T$ 圖中每條邊皆有非負權重 $C$，代表著這條管道的上限、容量 我們可以想像這張圖上的邊為水管，而點是他們的交會處。&#xA;那麼水管必定有他的上限，且水管中的水不一定會流滿。&#xA;源點就是水龍頭的源頭，會一直冒水。&#xA;匯點就是你家浴室的排水孔，水進去就流走了。&#xA;然後根據質量守恆定律(?)，水不會憑空消失，所以除了源點、匯點外，不應該要有水憑空出現/消失。&#xA;阿我們所想要知道的就是要怎麼安排一種流法，使得他們在流水的時候達到最佳&#xA;更明確的定義應該如下:&#xA;對於網路 $G$ 來說，流是指一種流通方法，必須滿足以下條件&#xA;每條邊的流量不能大於該條邊的容量，也就是 $f(a, b) \le C(a, b)$ 除了源點 $S$、匯點 $T$ 來說，其他的點應該都要符合進去的流量 = 出去的流量 源點只有出邊，匯點只有入邊 網路流可以幹嘛? 將問題轉換成流模型，通常可以獲得性質，或者可以直接拿 flow 的演算法去解決。&#xA;而且 flow 擁有很多很酷的引理，通常實際應用問題會跟 dp 一樣花樣多變，有時候根本不知道是流問題。&#xA;最大流 最大流的定義是在上述幾個流的規則中(容量限制、水量守恆下)，匯點可以收集到最大的水量的一種設計流量方法。&#xA;我們就稱之為最大流。&#xA;所以有時會有很多種方法皆為最大流。</description>
     </item>
     <item>
       <title>ABC433 F - 1122 Subsequence 2</title>
-      <link>https://blameazu.github.io/post/atcoder/abc433f/</link>
+      <link>http://localhost:1313/post/atcoder/abc433f/</link>
       <pubDate>Fri, 02 Jan 2026 08:26:44 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/atcoder/abc433f/</guid>
+      <guid>http://localhost:1313/post/atcoder/abc433f/</guid>
       <description>題目 定義 字串 $T$ 為一個 11-22 字串需符合以下條件&#xA;$T$ 是一個非空字串，且滿足每個字元皆為數字 $\lvert T \rvert$ 是偶數，$\vert T \vert$ 代表字串 $T$ 的長度，更具體的說 $T$ 的長度為偶數 $T$ 的 $1 \sim \frac{\lvert T \rvert}{2}$ 字元皆相同 $T$ 的 $(\frac{\lvert T \rvert}{2} + 1) \sim \vert T \vert$ 字元皆相同 將第 $1$ 個字元 $+1$ 可以得到最後一位字元，也就是說 $T_1 + 1 = T_{\vert T \vert}$ 今天給你一個由數字組成的字串 $S$，請找出 $S$ 有多少種子序列(不一定連續)符合 11-22 字串&#xA;阿答案很大，要模 $998244353$&#xA;題解 我們可以先分解一下題目，這種題目通常都需要先觀察 + 拆解，歸納為數學模型才能更好的解&#xA;觀察 1 不難發現的發現子序列長度必須為偶數&#xA;猜想 我們可以猜猜看這題的做法&#xA;猜猜看是不是排組</description>
     </item>
     <item>
       <title>ABC345 F - Many Lamps</title>
-      <link>https://blameazu.github.io/post/atcoder/abc345f/</link>
+      <link>http://localhost:1313/post/atcoder/abc345f/</link>
       <pubDate>Wed, 17 Dec 2025 19:11:14 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/atcoder/abc345f/</guid>
+      <guid>http://localhost:1313/post/atcoder/abc345f/</guid>
       <description>題目 今天有一個簡單無向圖&#xA;$N$ 個節點，$M$ 條邊&#xA;第 $i$ 條邊連接點 $v_i$ 與 $u_i$&#xA;每個節點上都有一盞燈，一開始每盞燈都是關著的&#xA;你可以對每一條邊選擇進行操作&#xA;將第 $i$ 條邊的左右兩節點上面的燈狀態反轉，開 $\to$ 關，關 $\to$ 開 問你是否可以做到最後有 $K$ 個燈是開著的，假如有請構造出解&#xA;題解 性質 我們可以先觀察到一個很明顯的性質&#xA;當你對一條邊進行操作時，會有三種狀況&#xA;當左右兩點都未被點亮，則反轉後點亮的燈數 $+ 2$ 當左右兩點都被點亮，則反轉後點亮的燈數 $- 2$ 當左右兩點有一點被點亮、一點沒點亮，則反轉後點亮的燈數不變 這可以使我們發現 $K$ 為偶數才有可能有解&#xA;將圖轉成樹 我們發現圖上反轉操作真的有點麻煩&#xA;我們是否可以將圖用樹來看呢?&#xA;(痾 以下不失一般性的假設圖連通)&#xA;我們發現，當我們構一棵從節點 $1$ 出發的樹&#xA;那麼我們可以盯著它，使用瞪眼法&#xA;發現有一個超酷的性質(要發現才會發現，所以這步 = 通靈)&#xA;當你從一個子樹的匯集點，也就是說樹的內部節點&#xA;有一個性質&#xA;我們能使子樹內的節點都為點亮的燈，但子樹的根無法確定狀態&#xA;這應該很明顯，假設我們現在子樹的根連接著很多個已經做好的子樹&#xA;那麼我們沒有點亮的燈只會處於跟根節點相連的那些子樹的根&#xA;這也許沒到很明顯，我們可以簡單的舉個例子&#xA;上圖是根結點與 一個 沒點亮的節點連接&#xA;那麼我們可以將那條邊反轉，接著整顆樹就變成全點亮&#xA;上面這張圖是說根結點與 兩個 沒點亮的節點連接&#xA;那麼我們也是將兩條邊反轉，那麼除了根結點，其他的節點皆被點亮&#xA;所以我們可以得出一個結論&#xA;當根結點與 奇數個 未點亮的節點相連，則我們可以透過一系列操作，使得整棵樹皆為點亮的節點&#xA;當根結點與 偶數個 未點亮的節點相連，則我們可以透過一系列操作，使得整棵樹除了根結點皆為點亮的節點</description>
     </item>
     <item>
       <title>TOJ 1008 速通麥塊</title>
-      <link>https://blameazu.github.io/post/toj/toj1008/</link>
+      <link>http://localhost:1313/post/toj/toj1008/</link>
       <pubDate>Mon, 15 Dec 2025 19:11:14 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/toj/toj1008/</guid>
+      <guid>http://localhost:1313/post/toj/toj1008/</guid>
       <description>題目連結 TOJ 1008 速通麥塊&#xA;前言 這題是我出在高一排名賽的防破台題&#xA;因為 brinton 那時候也是高一&#xA;結果卡到他的國培，所以他根本沒打到 哈哈&#xA;然後為啥會寫這篇文&#xA;因為我覺得我出的很好，所以推薦大家寫這題&#xA;阿好題就得配好題解&#xA;所以就來寫這篇了&#xA;看題目 我們可以簡單的看一下題目&#xA;我們可以發現&#xA;有 $N$ 堂課&#xA;每次翹課計畫必定相鄰的兩堂課不超過 $M$ 堂&#xA;然後翹第 $i$ 堂課可以拿到 $a_i$ 開心值&#xA;然後假如第 $k$ 次翹課 ($k \ge 2$)，那可以拿到 $\alpha_{\text{距離堂數}} \times \beta_{i}$&#xA;痾 上面還是基礎定義&#xA;所以我們應該可以知道簡單的 $DP$ 式為&#xA;$$ \displaystyle dp_i = \max(0, \max_{i-m \le j \le i-1} (dp_j) + \alpha_{i-j} \times \beta_{i}) + a_i $$&#xA;然後題目變難了一點點&#xA;第一種操作 是單點更改 $a_i$ 跟 $\beta_i$&#xA;第二種操作 是區間詢問，也就是給你 $l, r$</description>
     </item>
     <item>
       <title>2025全國賽心得</title>
-      <link>https://blameazu.github.io/post/contest/nccu/nccu/</link>
+      <link>http://localhost:1313/post/contest/nccu/nccu/</link>
       <pubDate>Sun, 14 Dec 2025 19:11:14 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/contest/nccu/nccu/</guid>
+      <guid>http://localhost:1313/post/contest/nccu/nccu/</guid>
       <description>簡介 全國賽應該是學科能力競賽的最終站&#xA;因為今年我是高三，所以是最後一年可以打&#xA;阿去年有參加，但是打超爛ㄏㄏ&#xA;這篇文是心得也有解題相關資訊&#xA;所以怕暴雷的就不要看 ㄏㄏ&#xA;出發 搭高鐵 早上一大早就起床，跑去沙崙高鐵站搭高鐵&#xA;去 711 買了一個阿薩姆紅茶跟兩團小小的奶油(?)麵包，但塞在書包裡面打算高鐵上吃&#xA;坐著等 paul 跟 brinton 來高鐵站&#xA;然後就一起上高鐵了&#xA;值得一提的是高鐵票因為是早鳥優惠，對號座車票直接減成 800 多，超強&#xA;然後就在高鐵上聊天，看 brinton IOI 破防文 然後就到台北了&#xA;喔然後有講到 brinton 只會寫流水帳&#xA;唉，太菜了吧，我這個心得大師都得搖頭 (雖然這篇應該也是流水帳)&#xA;搭去台大 下台北後我們就轉捷運&#xA;然後在捷運站上 brinton 丟給我一題 arc 的史萊姆題&#xA;不過很快就秒掉了 (大約= 10 min)，剩下的只是實作技巧&#xA;喔 然後在路上有隨機刷新一隻去台大資安面試的dr.dog 超強&#xA;然後就到台大了&#xA;再次表揚 paul 的地圖導航技巧，使我根本不用思考就可以到目的地&#xA;tarjan 講座 在台大逛逛看了美食街(? 也許不是)，找到一家沒開的小木屋鬆餅&#xA;把教室看成廁所差點衝進去上&#xA;然後就跑到了講座的會場&#xA;阿我跟 brinton 是德貞，廁所門是用推的，結果我們都用拉的&amp;hellip;&#xA;然後因為太早到會場沒辦法先報到，所以就在門口看他們兩個玩貓戰&#xA;btw 這時候就開始下毛毛雨了&#xA;接著看到 tarjan 進了會場，我們也就跟進去了&#xA;進去找一個感覺很好的位置坐著，然後就等著開講&#xA;阿講座整體內容就是介紹 dijkstra 以及他的一些證明跟優化&#xA;還有一大堆看不懂的資結、演算法、英文單字</description>
     </item>
     <item>
       <title>自我介紹</title>
-      <link>https://blameazu.github.io/post/hello/intro/</link>
+      <link>http://localhost:1313/post/hello/intro/</link>
       <pubDate>Mon, 08 Dec 2025 19:11:14 +0800</pubDate>
-      <guid>https://blameazu.github.io/post/hello/intro/</guid>
+      <guid>http://localhost:1313/post/hello/intro/</guid>
       <description>我是 Blame，目前高三就讀臺南一中&#xA;臺南一中資訊社 T26 社長&#xA;阿開這個 blog 只是想坐牢用個 github repo 來玩&#xA;然後丟幾個心得文跟題解上來&#xA;因為 hackmd 打太多字會卡，也許以後都會在這上面更新東西&#xA;然後，我最後想說的是&#xA;$$ 6767676767676767676767 $$&#xA;btw 發現自己架一個不能留言的 blog 網站特別強，這樣就不會被嗆了</description>
     </item>
   </channel>
