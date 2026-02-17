@@ -6,14 +6,21 @@
     <description>Recent content on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 06 Jan 2026 10:25:49 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 17:19:16 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TOJ772</title>
+      <link>http://localhost:1313/post/toj/toj772/</link>
+      <pubDate>Tue, 17 Feb 2026 17:19:16 +0800</pubDate>
+      <guid>http://localhost:1313/post/toj/toj772/</guid>
+      <description>題目連結 TOJ 772 神魔之塔&#xA;前言 這題是我高二時後的校內複選題目&#xA;但我過了一年才把他學起來&#xA;事實證明數論知識欠缺，數學菜雞&#xA;by the way，高二複選的時候我比賽有 AC 這題&#xA;只是是暴力假解，幹&#xA;題目 題目敘述 題敘又臭又長(但比賽的時候認真看題敘也是一門技巧)&#xA;以下是簡短的題敘&#xA;給你 $m$ 個元素的集合 $C$&#xA;定義&#xA;$$ v[i] = \prod^{i-1}_{j = 1} gcd(i, j)^j[gcd(i, j) \in C], \forall 1 \le i \le n $$&#xA;給 $q$ 筆操作，每次給 $l, r$&#xA;詢問&#xA;$$ \prod^{r}_{k = l} v[k] \pmod{998244353} $$&#xA;$1 \le n, q \le 10^5$ $1 \le m \le 100$ 先來拆解問題 首先我們發現，我們沒有修改到 $v[i]$ 的值吧?&#xA;所以對於 $Q$ 筆詢問</description>
+    </item>
     <item>
       <title>ABC168 E - ∙ (Bullet)</title>
       <link>http://localhost:1313/post/atcoder/abc168e/</link>
       <pubDate>Tue, 06 Jan 2026 10:25:49 +0800</pubDate>
       <guid>http://localhost:1313/post/atcoder/abc168e/</guid>
-      <description>題目 今天有 $N$ 個沙丁魚要放進去冰箱裡面&#xA;定義 丁魚 $i$ 與 丁魚 $j$ 會吵架是 $A_i \times A_j + B_i \times B_j = 0$&#xA;你需要求出有多少種放法，使得放在冰箱裡的丁魚們之間無任意兩者會吵架&#xA;冰箱裡至少需要放 $1$ 隻&#xA;題解 觀察 這題假如有學過高中數學的向量單元，應該可以很輕易地看出來 $A_i \times A_j + B_i \times B_j$ 很像內積&#xA;所以我們可以假設每個沙丁魚的 $(A_i, B_i)$ 為二維平面上面的座標向量&#xA;那麼我們就可以知道，當兩隻沙丁魚會吵架&#xA;那麼必定是他們與原點的方向向量垂直!!!&#xA;轉換為數學模型 所以我們就先把相互垂直的直線綁在一起看!&#xA;我們會發現除了這兩個互相垂直的直線&#xA;其他的直線與他們是沒有關聯的&#xA;所以答案就是每一組的答案相乘&#xA;那麼我們仔細看每一組自己本身的答案是多少&#xA;假設直線 $L$ 擁有 $A$ 個點&#xA;直線 $L&amp;rsquo;$ 擁有 $B$ 個點&#xA;那麼答案很明顯是&#xA;$$ C^A_1 + C^A_2 + \ldots + C^A_A + C^B_1 + C^B_2 + \ldots + C^B_B + 1 $$</description>
+      <description>題目 今天有 $N$ 個沙丁魚要放進去冰箱裡面&#xA;定義 丁魚 $i$ 與 丁魚 $j$ 會吵架是 $A_i \times A_j + B_i \times B_j = 0$&#xA;你需要求出有多少種放法，使得放在冰箱裡的丁魚們之間無任意兩者會吵架&#xA;冰箱裡至少需要放 $1$ 隻&#xA;題解 觀察 這題假如有學過高中數學的向量單元，應該可以很輕易地看出來 $A_i \times A_j + B_i \times B_j$ 很像內積&#xA;所以我們可以假設每個沙丁魚的 $(A_i, B_i)$ 為二維平面上面的座標向量&#xA;那麼我們就可以知道，當兩隻沙丁魚會吵架&#xA;那麼必定是他們與原點的方向向量垂直!!!&#xA;轉換為數學模型 所以我們就先把相互垂直的直線綁在一起看!&#xA;我們會發現除了這兩個互相垂直的直線&#xA;其他的直線與他們是沒有關聯的&#xA;所以答案就是每一組的答案相乘&#xA;那麼我們仔細看每一組自己本身的答案是多少&#xA;假設直線 $L$ 擁有 $A$ 個點&#xA;直線 $L&amp;rsquo;$ 擁有 $B$ 個點&#xA;那麼答案很明顯是&#xA;$$ (C^A_1 + C^A_2 + \ldots + C^A_A) + (C^B_1 + C^B_2 + \ldots + C^B_B) + 1 $$</description>
     </item>
     <item>
       <title>Flow Algorithm</title>
