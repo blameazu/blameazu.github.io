@@ -6,14 +6,18 @@
     <description>Recent content in Binomial Coefficients on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 02 Jan 2026 08:26:44 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/binomial-coefficients/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Blameazu</copyright>
+    <lastBuildDate>Fri, 02 Jan 2026 08:26:44 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/binomial-coefficients/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>ABC433 F - 1122 Subsequence 2</title>
       <link>http://localhost:1313/post/atcoder/abc433f/</link>
       <pubDate>Fri, 02 Jan 2026 08:26:44 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/atcoder/abc433f/</guid>
-      <description>題目 定義 字串 $T$ 為一個 11-22 字串需符合以下條件&#xA;$T$ 是一個非空字串，且滿足每個字元皆為數字 $\lvert T \rvert$ 是偶數，$\vert T \vert$ 代表字串 $T$ 的長度，更具體的說 $T$ 的長度為偶數 $T$ 的 $1 \sim \frac{\lvert T \rvert}{2}$ 字元皆相同 $T$ 的 $(\frac{\lvert T \rvert}{2} + 1) \sim \vert T \vert$ 字元皆相同 將第 $1$ 個字元 $+1$ 可以得到最後一位字元，也就是說 $T_1 + 1 = T_{\vert T \vert}$ 今天給你一個由數字組成的字串 $S$，請找出 $S$ 有多少種子序列(不一定連續)符合 11-22 字串&#xA;阿答案很大，要模 $998244353$&#xA;題解 我們可以先分解一下題目，這種題目通常都需要先觀察 + 拆解，歸納為數學模型才能更好的解&#xA;觀察 1 不難發現的發現子序列長度必須為偶數&#xA;猜想 我們可以猜猜看這題的做法&#xA;猜猜看是不是排組</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目&#xA;    &lt;div id=&#34;題目&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;div class=&#34;bf-box bf-problem&#34;&gt;&#xA;  &lt;div class=&#34;bf-box__header&#34;&gt;ABC433 F - 1122 Subsequence 2&lt;/div&gt;&#xA;  &lt;div class=&#34;bf-box__body&#34;&gt;&lt;p&gt;定義 字串 $T$ 為一個 11-22 字串需符合以下條件&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

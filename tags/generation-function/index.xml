@@ -2,18 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Generation Function on Blame&#39;s Blog</title>
-    <link>http://localhost:1313/tags/generation-function/</link>
+    <link>http://localhost:1317/tags/generation-function/</link>
     <description>Recent content in Generation Function on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/generation-function/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Blameazu</copyright>
+    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate><atom:link href="http://localhost:1317/tags/generation-function/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>ABC150 E - Change a Little Bit</title>
-      <link>http://localhost:1313/post/atcoder/abc150e/</link>
+      <link>http://localhost:1317/post/atcoder/abc150e/</link>
       <pubDate>Fri, 06 Mar 2026 16:56:39 +0800</pubDate>
-      <guid>http://localhost:1313/post/atcoder/abc150e/</guid>
-      <description>題目連結 ABC 150 E&#xA;題目 今天有兩個長度為 $N$ 的 01 序列 $S$ 跟 $T$&#xA;定義一次操作為&#xA;選擇 $S$ 的一個位置 $i$&#xA;花費 $C_i \times D$，$D$ 是 $(S_j \neq T_j, \forall 1 \le j \le N)$ 的個數，翻轉 $S_i$ ($0 \to 1, 1 \to 0$)&#xA;定義函數 $f(S, T)$ 代表著序列 $S$ 經過一系列操作後等於序列 $T$ 的最小花費是多少。&#xA;總共會有 $2^{N} \times (2^{N}-1)$ 的 $f(S, T)$ 組合，計算 $\sum f(S, T) \pmod {10^9+7}$，也就是所有情況的最小花費總和模上 $10^9+7$&#xA;$1 \le N \le 2 \times 10^5$&#xA;$1 \le C_i \le 10^9$</description>
+      
+      <guid>http://localhost:1317/post/atcoder/abc150e/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc150/tasks/abc150_e&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 150 E&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

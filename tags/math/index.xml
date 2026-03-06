@@ -6,42 +6,58 @@
     <description>Recent content in Math on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Blameazu</copyright>
+    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>ABC150 E - Change a Little Bit</title>
       <link>http://localhost:1313/post/atcoder/abc150e/</link>
       <pubDate>Fri, 06 Mar 2026 16:56:39 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/atcoder/abc150e/</guid>
-      <description>題目連結 ABC 150 E&#xA;題目 今天有兩個長度為 $N$ 的 01 序列 $S$ 跟 $T$&#xA;定義一次操作為&#xA;選擇 $S$ 的一個位置 $i$&#xA;花費 $C_i \times D$，$D$ 是 $(S_j \neq T_j, \forall 1 \le j \le N)$ 的個數，翻轉 $S_i$ ($0 \to 1, 1 \to 0$)&#xA;定義函數 $f(S, T)$ 代表著序列 $S$ 經過一系列操作後等於序列 $T$ 的最小花費是多少。&#xA;總共會有 $2^{N} \times (2^{N}-1)$ 的 $f(S, T)$ 組合，計算 $\sum f(S, T) \pmod {10^9+7}$，也就是所有情況的最小花費總和模上 $10^9+7$&#xA;$1 \le N \le 2 \times 10^5$&#xA;$1 \le C_i \le 10^9$</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc150/tasks/abc150_e&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 150 E&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>TOJ 772 神魔之塔</title>
       <link>http://localhost:1313/post/toj/toj772/</link>
       <pubDate>Tue, 17 Feb 2026 17:19:16 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/toj/toj772/</guid>
-      <description>題目連結 TOJ 772 神魔之塔&#xA;前言 這題是我高二時後的校內複選題目&#xA;但我過了一年才把他學起來&#xA;事實證明數論知識欠缺，數學菜雞&#xA;by the way，高二複選的時候我比賽有 AC 這題&#xA;只是是暴力假解，幹&#xA;題目 題目敘述 題敘又臭又長(但比賽的時候認真看題敘也是一門技巧)&#xA;以下是簡短的題敘&#xA;給你 $m$ 個元素的集合 $C$&#xA;定義&#xA;$$ v[i] = \prod^{i-1}_{j = 1} gcd(i, j)^j[gcd(i, j) \in C], \forall 1 \le i \le n $$&#xA;給 $q$ 筆操作，每次給 $l, r$&#xA;詢問&#xA;$$ \prod^{r}_{k = l} v[k] \pmod{998244353} $$&#xA;$1 \le n, q \le 10^5$ $1 \le m \le 100$ 先來拆解問題 首先我們發現，我們沒有修改到 $v[i]$ 的值吧?&#xA;所以對於 $Q$ 筆詢問</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://toj.tfcis.org/oj/pro/772/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;TOJ 772  神魔之塔&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>ABC168 E - ∙ (Bullet)</title>
       <link>http://localhost:1313/post/atcoder/abc168e/</link>
       <pubDate>Tue, 06 Jan 2026 10:25:49 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/atcoder/abc168e/</guid>
-      <description>題目連結 ABC 168 E&#xA;題目 今天有 $N$ 個沙丁魚要放進去冰箱裡面&#xA;定義 丁魚 $i$ 與 丁魚 $j$ 會吵架是 $A_i \times A_j + B_i \times B_j = 0$&#xA;你需要求出有多少種放法，使得放在冰箱裡的丁魚們之間無任意兩者會吵架&#xA;冰箱裡至少需要放 $1$ 隻&#xA;$1 \le N \le 2 \times 10^5$&#xA;$-10^{18} \le A_i, B_i \le 10^{18}$&#xA;題解 觀察 這題假如有學過高中數學的向量單元，應該可以很輕易地看出來 $A_i \times A_j + B_i \times B_j$ 很像內積&#xA;所以我們可以假設每個沙丁魚的 $(A_i, B_i)$ 為二維平面上面的座標向量&#xA;那麼我們就可以知道，當兩隻沙丁魚會吵架&#xA;那麼必定是他們與原點的方向向量垂直!!!&#xA;轉換為數學模型 所以我們就先把相互垂直的直線綁在一起看!&#xA;我們會發現除了這兩個互相垂直的直線&#xA;其他的直線與他們是沒有關聯的&#xA;所以答案就是每一組的答案相乘&#xA;那麼我們仔細看每一組自己本身的答案是多少&#xA;假設直線 $L$ 擁有 $A$ 個點&#xA;直線 $L&amp;rsquo;$ 擁有 $B$ 個點</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc168/tasks/abc168_e&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 168 E&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>ABC433 F - 1122 Subsequence 2</title>
       <link>http://localhost:1313/post/atcoder/abc433f/</link>
       <pubDate>Fri, 02 Jan 2026 08:26:44 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/atcoder/abc433f/</guid>
-      <description>題目 定義 字串 $T$ 為一個 11-22 字串需符合以下條件&#xA;$T$ 是一個非空字串，且滿足每個字元皆為數字 $\lvert T \rvert$ 是偶數，$\vert T \vert$ 代表字串 $T$ 的長度，更具體的說 $T$ 的長度為偶數 $T$ 的 $1 \sim \frac{\lvert T \rvert}{2}$ 字元皆相同 $T$ 的 $(\frac{\lvert T \rvert}{2} + 1) \sim \vert T \vert$ 字元皆相同 將第 $1$ 個字元 $+1$ 可以得到最後一位字元，也就是說 $T_1 + 1 = T_{\vert T \vert}$ 今天給你一個由數字組成的字串 $S$，請找出 $S$ 有多少種子序列(不一定連續)符合 11-22 字串&#xA;阿答案很大，要模 $998244353$&#xA;題解 我們可以先分解一下題目，這種題目通常都需要先觀察 + 拆解，歸納為數學模型才能更好的解&#xA;觀察 1 不難發現的發現子序列長度必須為偶數&#xA;猜想 我們可以猜猜看這題的做法&#xA;猜猜看是不是排組</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目&#xA;    &lt;div id=&#34;題目&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;div class=&#34;bf-box bf-problem&#34;&gt;&#xA;  &lt;div class=&#34;bf-box__header&#34;&gt;ABC433 F - 1122 Subsequence 2&lt;/div&gt;&#xA;  &lt;div class=&#34;bf-box__body&#34;&gt;&lt;p&gt;定義 字串 $T$ 為一個 11-22 字串需符合以下條件&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>TOJ 1008 速通麥塊</title>
       <link>http://localhost:1313/post/toj/toj1008/</link>
       <pubDate>Mon, 15 Dec 2025 19:11:14 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/toj/toj1008/</guid>
-      <description>題目連結 TOJ 1008 速通麥塊&#xA;前言 這題是我出在高一排名賽的防破台題&#xA;因為 brinton 那時候也是高一&#xA;結果卡到他的國培，所以他根本沒打到 哈哈&#xA;然後為啥會寫這篇文&#xA;因為我覺得我出的很好，所以推薦大家寫這題&#xA;阿好題就得配好題解&#xA;所以就來寫這篇了&#xA;看題目 我們可以簡單的看一下題目&#xA;我們可以發現&#xA;有 $N$ 堂課&#xA;每次翹課計畫必定相鄰的兩堂課不超過 $M$ 堂&#xA;然後翹第 $i$ 堂課可以拿到 $a_i$ 開心值&#xA;然後假如第 $k$ 次翹課 ($k \ge 2$)，那可以拿到 $\alpha_{\text{距離堂數}} \times \beta_{i}$&#xA;痾 上面還是基礎定義&#xA;所以我們應該可以知道簡單的 $DP$ 式為&#xA;$$ \displaystyle dp_i = \max(0, \max_{i-m \le j \le i-1} (dp_j) + \alpha_{i-j} \times \beta_{i}) + a_i $$&#xA;然後題目變難了一點點&#xA;第一種操作 是單點更改 $a_i$ 跟 $\beta_i$&#xA;第二種操作 是區間詢問，也就是給你 $l, r$</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://toj.tfcis.org/oj/pro/1008/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;TOJ 1008 速通麥塊&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

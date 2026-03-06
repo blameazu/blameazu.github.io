@@ -6,21 +6,28 @@
     <description>Recent content in TOJ on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 17 Feb 2026 17:19:16 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/toj/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Blameazu</copyright>
+    <lastBuildDate>Tue, 17 Feb 2026 17:19:16 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/toj/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>TOJ 772 神魔之塔</title>
       <link>http://localhost:1313/post/toj/toj772/</link>
       <pubDate>Tue, 17 Feb 2026 17:19:16 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/toj/toj772/</guid>
-      <description>題目連結 TOJ 772 神魔之塔&#xA;前言 這題是我高二時後的校內複選題目&#xA;但我過了一年才把他學起來&#xA;事實證明數論知識欠缺，數學菜雞&#xA;by the way，高二複選的時候我比賽有 AC 這題&#xA;只是是暴力假解，幹&#xA;題目 題目敘述 題敘又臭又長(但比賽的時候認真看題敘也是一門技巧)&#xA;以下是簡短的題敘&#xA;給你 $m$ 個元素的集合 $C$&#xA;定義&#xA;$$ v[i] = \prod^{i-1}_{j = 1} gcd(i, j)^j[gcd(i, j) \in C], \forall 1 \le i \le n $$&#xA;給 $q$ 筆操作，每次給 $l, r$&#xA;詢問&#xA;$$ \prod^{r}_{k = l} v[k] \pmod{998244353} $$&#xA;$1 \le n, q \le 10^5$ $1 \le m \le 100$ 先來拆解問題 首先我們發現，我們沒有修改到 $v[i]$ 的值吧?&#xA;所以對於 $Q$ 筆詢問</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://toj.tfcis.org/oj/pro/772/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;TOJ 772  神魔之塔&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>TOJ 1008 速通麥塊</title>
       <link>http://localhost:1313/post/toj/toj1008/</link>
       <pubDate>Mon, 15 Dec 2025 19:11:14 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/toj/toj1008/</guid>
-      <description>題目連結 TOJ 1008 速通麥塊&#xA;前言 這題是我出在高一排名賽的防破台題&#xA;因為 brinton 那時候也是高一&#xA;結果卡到他的國培，所以他根本沒打到 哈哈&#xA;然後為啥會寫這篇文&#xA;因為我覺得我出的很好，所以推薦大家寫這題&#xA;阿好題就得配好題解&#xA;所以就來寫這篇了&#xA;看題目 我們可以簡單的看一下題目&#xA;我們可以發現&#xA;有 $N$ 堂課&#xA;每次翹課計畫必定相鄰的兩堂課不超過 $M$ 堂&#xA;然後翹第 $i$ 堂課可以拿到 $a_i$ 開心值&#xA;然後假如第 $k$ 次翹課 ($k \ge 2$)，那可以拿到 $\alpha_{\text{距離堂數}} \times \beta_{i}$&#xA;痾 上面還是基礎定義&#xA;所以我們應該可以知道簡單的 $DP$ 式為&#xA;$$ \displaystyle dp_i = \max(0, \max_{i-m \le j \le i-1} (dp_j) + \alpha_{i-j} \times \beta_{i}) + a_i $$&#xA;然後題目變難了一點點&#xA;第一種操作 是單點更改 $a_i$ 跟 $\beta_i$&#xA;第二種操作 是區間詢問，也就是給你 $l, r$</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://toj.tfcis.org/oj/pro/1008/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;TOJ 1008 速通麥塊&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

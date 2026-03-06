@@ -1,167 +1,1003 @@
-<html>
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<html
+  lang="zh-tw"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="zh-tw">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
 
-    <title>Blame&#39;s Blog - TOJ 1008 速通麥塊 </title>
+  
+  
+    <title>TOJ 1008 速通麥塊 &middot; Blame&#39;s Blog</title>
+    <meta name="title" content="TOJ 1008 速通麥塊 &middot; Blame&#39;s Blog">
+  
+
+  
+  
+    <meta name="description" content="防暴雷">
+  
+  
+    <meta name="keywords" content="TOJ,Matrix,Math,Dynamic Programming,Solution,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/post/toj/toj1008/">
+  
+
+  
+  
+    <meta name="author" content="Blameazu">
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/post/toj/toj1008/">
+  <meta property="og:site_name" content="Blame&#39;s Blog">
+  <meta property="og:title" content="TOJ 1008 速通麥塊">
+  <meta property="og:description" content="防暴雷">
+  <meta property="og:locale" content="zh_tw">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2025-12-15T19:11:14+08:00">
+    <meta property="article:modified_time" content="2025-12-15T19:11:14+08:00">
+    <meta property="article:tag" content="TOJ">
+    <meta property="article:tag" content="Matrix">
+    <meta property="article:tag" content="Math">
+    <meta property="article:tag" content="Dynamic Programming">
+    <meta property="article:tag" content="Solution">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TOJ 1008 速通麥塊">
+  <meta name="twitter:description" content="防暴雷">
+
+  
+  
+  
+  
     
+      
     
-    <meta content="TOJ, Matrix, Math, Dynamic Programming, Solution" name="keywords">
+  
     
-    <meta content="Blame&#39;s Blog - 防暴雷" name="description">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
     
+  
     
-        <link rel="icon" href="/img/logo.jpg">
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.c9f08d1c737961c1686bdfe3dbb9c47befe321dbd2c34bbff1d9df064cca7b18246beb540d71456ea7ddd16e6962e0bbaa2138f713fc01d2a3e8f4d3ce5d3b2a.css"
+    integrity="sha512-yfCNHHN5YcFoa9/j27nEe&#43;/jIdvSw0u/8dnfBkzKexgka&#43;tUDXFFbqfd0W5pYuC7qiE49xP8AdKj6PTTzl07Kg==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.858f7f82734cfae08d59fcf8d0eb186f01706a84e2f7d20d39edfd7bc8bed6166e02d5c65ecce1de82b1ac52d1e01d77bd1a82d19186fdae5fe6e12d867fcf68.js"
+      integrity="sha512-hY9/gnNM&#43;uCNWfz40OsYbwFwaoTi99INOe39e8i&#43;1hZuAtXGXszh3oKxrFLR4B13vRqC0ZGG/a5f5uEthn/PaA=="
+      data-copy="複製"
+      data-copied="已複製"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
     
 
-    
+  
+  <link rel="icon" href="/img/logo.jpg">
+  <link rel="shortcut icon" href="/img/logo.jpg">
+  <link rel="apple-touch-icon" href="/img/logo.jpg">
 
-    
 
-    
-    
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            extensions: ["tex2jax.js"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: true
-            },
-            "HTML-CSS": { availableFonts: ["TeX"] }
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
-    
+  
 
-    <link rel="stylesheet" href="/layui/css/layui.css">
-    <link rel="stylesheet" href="/self/css/default.css">
-    <link rel="stylesheet" href="/self/css/dark-mode.css">
-    <script src=" /layui/layui.js"></script>
-
-    <link rel="stylesheet" async href="/self/css/markdown.min.css">
-    <link rel="stylesheet" async href="/self/css/gallery.css">
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "TOJ 1008 速通麥塊",
+    "headline": "TOJ 1008 速通麥塊",
+    "description": "防暴雷",
+    "inLanguage": "zh-tw",
+    "url" : "http://localhost:1313/post/toj/toj1008/",
+    "author" : {
+      "@type": "Person",
+      "name": "Blameazu"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-12-15T19:11:14\u002b08:00",
+    "datePublished": "2025-12-15T19:11:14\u002b08:00",
     
+    "dateModified": "2025-12-15T19:11:14\u002b08:00",
     
+    "keywords": ["TOJ","Matrix","Math","Dynamic Programming","Solution"],
     
+    "mainEntityOfPage": "true",
+    "wordCount": "2699"
+  }]
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script>
-    <script src="/self/js/dark-mode.js"></script></head>
 
+
+  
+  
+
+  
+  
+    <style>
+  mjx-container[jax="SVG"][display="false"] { display: inline-block; }
+  mjx-container[jax="SVG"][display="true"] { display: block; margin: 0.85em 0; }
+  mjx-container svg { display: inline; }
+  mjx-container[display="true"] svg { display: block; margin: 0 auto; }
+</style>
 <script>
   MathJax = {
     tex: {
-      inlineMath: {'[+]': [['$', '$']]}
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      tags: 'none'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    startup: {
+      typeset: true
     }
   };
 </script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-svg.js"></script>
-<body>
-    
-    <header class="layui-header layui-bg-cyan">
 
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        快轉到主要內容
+      </a>
+    </div>
     
-        <a href=""><img src="/img/logo.jpg" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+      <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 z-100">
+  <div
+    id="menu-blur"
+    class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl bg-neutral/25 dark:bg-neutral-800/25"></div>
+  <div class="relative m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32">
+    <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
     
     
-    <a class="nav-self-logo" href="/">
-        Blame&#39;s Blog
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Blame&rsquo;s Blog</span>
+          
+            <img
+              src="/img/logo.jpg"
+              width="112"
+              height="112"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Blame&rsquo;s Blog
     </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="首頁"
+      title="Blame&#39;s Blog">
+      
+      
+        <span class="text-base font-medium break-normal">
+          首頁
+        </span>
+      
+    </a>
+  
 
-    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+    
+      
+  
+    <a
+      href="/post/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="文章"
+      title="Posts">
+      
+      
+        <span class="text-base font-medium break-normal">
+          文章
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="標籤"
+      title="Tags">
+      
+      
+        <span class="text-base font-medium break-normal">
+          標籤
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="分類"
+      title="Categories">
+      
+      
+        <span class="text-base font-medium break-normal">
+          分類
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="搜尋 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="搜尋 (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/"
+        aria-label="首頁"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Blame&#39;s Blog" class="text-2xl font-bold tracking-tight">
+          首頁
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/post/"
+        aria-label="文章"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          文章
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="標籤"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          標籤
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/categories/"
+        aria-label="分類"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+        <span title="Categories" class="text-2xl font-bold tracking-tight">
+          分類
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<script
+  type="text/javascript"
+  src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+  integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+  data-blur-id="menu-blur"></script>
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+
+
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+        <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/"
+      >Blame&#39;s Blog</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/post/"
+      >Posts</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="hidden">
+    <a class="hover:underline decoration-neutral-300 dark:underline-neutral-600" href="/post/toj/toj1008/"
+      >TOJ 1008 速通麥塊</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        TOJ 1008 速通麥塊
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-12-15T19:11:14&#43;08:00">December 15, 2025</time><span class="px-2 text-primary-500">&middot;</span><span>2699 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">6 分鐘</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/toj/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    TOJ
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/matrix/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Matrix
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/math/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Math
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/dynamic-programming/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Dynamic Programming
+  </span>
+</span>
+
+              </a>
+            
+              <a class="relative mt-[0.5rem] me-2" href="/tags/solution/">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Solution
+  </span>
+</span>
+
+              </a>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
         
         
-        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Blameazu"
+        src="/img/avatar_hu_a95daf7bfa7f25b0.png"
+        data-zoom-src="/img/avatar_hu_2aa379f16f5fddb0.png">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        作者
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Blameazu
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">你好，我是 Blame。一隻只會寫心得的競程選手。</div>
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目錄
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#題目連結">題目連結</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#看題目">看題目</a></li>
+    <li><a href="#一眼就能看出來的東西">一眼就能看出來的東西</a></li>
+    <li><a href="#子題-1-是範測">子題 1 是範測</a></li>
+    <li><a href="#子題-2">子題 2</a></li>
+    <li><a href="#子題-3">子題 3</a></li>
+    <li><a href="#子題-5">子題 5</a></li>
+    <li><a href="#子題-4">子題 4</a></li>
+    <li><a href="#動態動態規劃-例題">動態動態規劃 例題</a></li>
+    <li><a href="#資結時刻">資結時刻!</a></li>
+    <li><a href="#回本題">回本題</a></li>
+    <li><a href="#回歸子題-4">回歸子題 4</a></li>
+    <li><a href="#滿分解">滿分解</a></li>
+    <li><a href="#實作">實作</a></li>
+    <li><a href="#結語">結語</a></li>
+    <li><a href="#臭一下">臭一下</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    目錄
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#題目連結">題目連結</a></li>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#看題目">看題目</a></li>
+    <li><a href="#一眼就能看出來的東西">一眼就能看出來的東西</a></li>
+    <li><a href="#子題-1-是範測">子題 1 是範測</a></li>
+    <li><a href="#子題-2">子題 2</a></li>
+    <li><a href="#子題-3">子題 3</a></li>
+    <li><a href="#子題-5">子題 5</a></li>
+    <li><a href="#子題-4">子題 4</a></li>
+    <li><a href="#動態動態規劃-例題">動態動態規劃 例題</a></li>
+    <li><a href="#資結時刻">資結時刻!</a></li>
+    <li><a href="#回本題">回本題</a></li>
+    <li><a href="#回歸子題-4">回歸子題 4</a></li>
+    <li><a href="#滿分解">滿分解</a></li>
+    <li><a href="#實作">實作</a></li>
+    <li><a href="#結語">結語</a></li>
+    <li><a href="#臭一下">臭一下</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
         
 
-        
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">題目連結
+    <div id="題目連結" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
+<p><a href="https://toj.tfcis.org/oj/pro/1008/"  target="_blank" rel="noreferrer">TOJ 1008 速通麥塊</a></p>
 
-        
-        <li class="layui-nav-item dark-mode-toggle">
-            <a href="javascript:;" onclick="toggleDarkMode()" class="dark-mode-btn" title="Toggle Dark Mode">
-                <i class="layui-icon" id="darkModeIcon" style="font-size: 22px;"></i>
-            </a>
-        </li>
-
-        
-        <li class="layui-nav-item" id="nav_small">
-            <a href="javascript:;">
-                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
-            </a>
-
-            <dl class="layui-nav-child">
-                
-                <dd><a href="/post/">Posts</a></dd>
-                
-
-                
-            </dl>
-        </li>
-    </ul>
-</header>
-
-<script>
-layui.use('element', function(){
-  var element = layui.element;
-});
-</script>
-
-        <div id="content" style="min-height:80%">
-<div class="layui-container" style="margin-bottom: 10px">
+<h2 class="relative group">前言
+    <div id="前言" class="anchor"></div>
     
-
-    <div class="layui-row layui-col-space10">
-        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
-            <div class="layui-card single-card">
-                <br />
-                <blockquote class="self-elem-quote self-elem-quote-bg-red markdown-body single-title" >
-                    <h1>TOJ 1008 速通麥塊</h1>
-                    <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2025-12-15</span>
-
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%89%8d%e8%a8%80" aria-label="定位點">#</a>
+    </span>
     
-    
-
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/toj/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">TOJ</span>
-        </a>
-    
-        <a href="/tags/matrix/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Matrix</span>
-        </a>
-    
-        <a href="/tags/math/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
-        </a>
-    
-        <a href="/tags/dynamic-programming/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Dynamic Programming</span>
-        </a>
-    
-        <a href="/tags/solution/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
-        </a>
-    
-    
-</h3>
-
-                </blockquote>
-                <div class="layui-card-body markdown-body single-content">
-                    <h2 id="題目連結">題目連結</h2>
-<p><a href="https://toj.tfcis.org/oj/pro/1008/">TOJ 1008 速通麥塊</a></p>
-<h2 id="前言">前言</h2>
+</h2>
 <p>這題是我出在高一排名賽的防破台題</p>
 <p>因為 brinton 那時候也是高一</p>
 <p>結果卡到他的國培，所以他根本沒打到 哈哈</p>
@@ -169,7 +1005,16 @@ layui.use('element', function(){
 <p>因為我覺得我出的很好，所以推薦大家寫這題</p>
 <p>阿好題就得配好題解</p>
 <p>所以就來寫這篇了</p>
-<h2 id="看題目">看題目</h2>
+
+<h2 class="relative group">看題目
+    <div id="看題目" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%9c%8b%e9%a1%8c%e7%9b%ae" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>我們可以簡單的看一下題目</p>
 <p>我們可以發現</p>
 <p>有 $N$ 堂課</p>
@@ -178,19 +1023,45 @@ layui.use('element', function(){
 <p>然後假如第 $k$ 次翹課 ($k \ge 2$)，那可以拿到 $\alpha_{\text{距離堂數}} \times \beta_{i}$</p>
 <p>痾 上面還是基礎定義</p>
 <p>所以我們應該可以知道簡單的 $DP$ 式為</p>
-<p>$$
+$$
 \displaystyle
 dp_i = \max(0, \max_{i-m \le j \le i-1} (dp_j) + \alpha_{i-j} \times \beta_{i}) + a_i
-$$</p>
-<p>然後題目變難了一點點</p>
+$$<p>然後題目變難了一點點</p>
 <p>第一種操作 是單點更改 $a_i$ 跟 $\beta_i$</p>
 <p>第二種操作 是區間詢問，也就是給你 $l, r$</p>
 <p>你要找出一個合法子序列，且讓他的總和最大化</p>
-<h2 id="一眼就能看出來的東西">一眼就能看出來的東西</h2>
+
+<h2 class="relative group">一眼就能看出來的東西
+    <div id="一眼就能看出來的東西" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e4%b8%80%e7%9c%bc%e5%b0%b1%e8%83%bd%e7%9c%8b%e5%87%ba%e4%be%86%e7%9a%84%e6%9d%b1%e8%a5%bf" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>會發現我們只會用到 $\alpha_1 \cdots \alpha_M$ ㄏㄏ</p>
-<h2 id="子題-1-是範測">子題 1 是範測</h2>
+
+<h2 class="relative group">子題 1 是範測
+    <div id="子題-1-是範測" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%90%e9%a1%8c-1-%e6%98%af%e7%af%84%e6%b8%ac" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>ㄏㄏ</p>
-<h2 id="子題-2">子題 2</h2>
+
+<h2 class="relative group">子題 2
+    <div id="子題-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%90%e9%a1%8c-2" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>這個子題是給只要有認真看題目的人寫的</p>
 <p>雖然這題沒人認真看</p>
 <p>但出出來的目的其實就是訓練大家開題與讀題的技巧</p>
@@ -204,45 +1075,79 @@ $$</p>
 <p>理論上應該要給 $Q \le 10$ 而已</p>
 <p>但是想要騙一下很會分析複雜度的人</p>
 <p>讓他們以為 $O(NMQ)$ 其實有反例之類的ww</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;vector&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> n, m; cin <span style="color:#f92672">&gt;&gt;</span> n <span style="color:#f92672">&gt;&gt;</span> m;
-</span></span><span style="display:flex;"><span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> a(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), alpha(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>), beta(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> a[i];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> alpha[i];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>) cin <span style="color:#f92672">&gt;&gt;</span> beta[i];
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> q; cin <span style="color:#f92672">&gt;&gt;</span> q;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span>(q<span style="color:#f92672">--</span>) {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> cmd; cin <span style="color:#f92672">&gt;&gt;</span> cmd;
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(cmd <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> i, A, B; cin <span style="color:#f92672">&gt;&gt;</span> i <span style="color:#f92672">&gt;&gt;</span> A <span style="color:#f92672">&gt;&gt;</span> B;
-</span></span><span style="display:flex;"><span>            a[i] <span style="color:#f92672">=</span> A;
-</span></span><span style="display:flex;"><span>            beta[i] <span style="color:#f92672">=</span> B;
-</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span>(cmd <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> l, r; cin <span style="color:#f92672">&gt;&gt;</span> l <span style="color:#f92672">&gt;&gt;</span> r;
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-</span></span><span style="display:flex;"><span>            vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> dp(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> l; i <span style="color:#f92672">&lt;=</span> r; i<span style="color:#f92672">++</span>) {
-</span></span><span style="display:flex;"><span>                dp[i] <span style="color:#f92672">=</span> a[i];
-</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> max(l, i<span style="color:#f92672">-</span>m); j <span style="color:#f92672">&lt;=</span> i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>; j<span style="color:#f92672">++</span>)
-</span></span><span style="display:flex;"><span>                    dp[i] <span style="color:#f92672">=</span> max(dp[i], dp[j] <span style="color:#f92672">+</span> alpha[i<span style="color:#f92672">-</span>j]<span style="color:#f92672">*</span>beta[i] <span style="color:#f92672">+</span> a[i]);
-</span></span><span style="display:flex;"><span>                ans <span style="color:#f92672">=</span> max(ans, dp[i]);
-</span></span><span style="display:flex;"><span>            }
-</span></span><span style="display:flex;"><span>            cout <span style="color:#f92672">&lt;&lt;</span> ans <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#39;\n&#39;</span>;
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="子題-3">子題 3</h2>
+
+
+<details class="bf-spoiler" >
+  <summary class="bf-spoiler__summary">code</summary>
+  <div class="bf-spoiler__body"><div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">m</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span> <span class="o">&gt;&gt;</span> <span class="n">m</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">a</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">alpha</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span> <span class="n">beta</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">alpha</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">beta</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">    <span class="kt">int</span> <span class="n">q</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">q</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">while</span><span class="p">(</span><span class="n">q</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="kt">int</span> <span class="n">cmd</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">cmd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span><span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">i</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">i</span> <span class="o">&gt;&gt;</span> <span class="n">A</span> <span class="o">&gt;&gt;</span> <span class="n">B</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">A</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">beta</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">B</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">cmd</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">l</span><span class="p">,</span> <span class="n">r</span><span class="p">;</span> <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">l</span> <span class="o">&gt;&gt;</span> <span class="n">r</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="kt">int</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dp</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">l</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl">                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">l</span><span class="p">,</span> <span class="n">i</span><span class="o">-</span><span class="n">m</span><span class="p">);</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                    <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">dp</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">+</span> <span class="n">alpha</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="n">j</span><span class="p">]</span><span class="o">*</span><span class="n">beta</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">                <span class="n">ans</span> <span class="o">=</span> <span class="n">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">dp</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">ans</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+</div>
+</details>
+
+
+<h2 class="relative group">子題 3
+    <div id="子題-3" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%90%e9%a1%8c-3" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>我們會發現 $Q = 1$ 的話</p>
 <p>代表只有詢問</p>
 <p>所以我們就跟做子題 $2$ 一樣</p>
 <p>只是把 int 改成 long long 就能過了</p>
-<h2 id="子題-5">子題 5</h2>
+
+<h2 class="relative group">子題 5
+    <div id="子題-5" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%90%e9%a1%8c-5" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>發現把子題 $2$ + 子題 $3$ 就能過子題 $5$ 了</p>
 <p>因為 $2 + 3 = 5$ (x</p>
-<h2 id="子題-4">子題 4</h2>
+
+<h2 class="relative group">子題 4
+    <div id="子題-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%ad%90%e9%a1%8c-4" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>我們發現區間詢問一個動態規劃的問題好難喔</p>
 <p>動態規劃的問題不是只能靠著前面的狀態去做轉移嗎</p>
 <p>那我每次區間詢問的動態規劃基底就不一樣了</p>
@@ -251,7 +1156,16 @@ $$</p>
 <p>叫做 <strong>動態動態規劃</strong></p>
 <p>我們可以動態的做動態規劃</p>
 <p>聽起來超酷的對吧?</p>
-<h2 id="動態動態規劃-例題">動態動態規劃 例題</h2>
+
+<h2 class="relative group">動態動態規劃 例題
+    <div id="動態動態規劃-例題" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%8b%95%e6%85%8b%e5%8b%95%e6%85%8b%e8%a6%8f%e5%8a%83-%e4%be%8b%e9%a1%8c" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>首先先給你一個線性轉移的 $DP$ 式好了</p>
 <p>$dp_i = dp_{i-1} \times 2 + dp_{i-2} \times 3$</p>
 <p>有什麼酷酷的東西可以幫我們做到很快很快的轉移嗎?</p>
@@ -268,7 +1182,16 @@ $$</p>
 <p>原因很簡單</p>
 <p>因為你每一個轉移矩陣都不一樣，所以當你要乘上一堆矩陣的時候，你理論上應該要全部掃過所有東西!</p>
 <p>蛤?這麼爛喔，那我們還用什麼矩陣!</p>
-<h2 id="資結時刻">資結時刻!</h2>
+
+<h2 class="relative group">資結時刻!
+    <div id="資結時刻" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%b3%87%e7%b5%90%e6%99%82%e5%88%bb" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>我們發現，矩陣乘法有結合律欸!</p>
 <p>那我們腦中應該要有一個概念</p>
 <p>當具有結合律的東西</p>
@@ -280,45 +1203,70 @@ $$</p>
 <p>挖! <strong>線段樹</strong></p>
 <p>我們可以發現，我們只要將矩陣丟上去線段樹上面</p>
 <p>那就可以做到所有事情!!!!</p>
-<h2 id="回本題">回本題</h2>
+
+<h2 class="relative group">回本題
+    <div id="回本題" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9e%e6%9c%ac%e9%a1%8c" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>蛤? 但是我們剛剛只知道怎麼做線性轉移的 DP 轉移阿</p>
 <p>現在這題的轉移式有 $\max$ 欸</p>
 <p>根本不能用矩陣乘法做了吧?</p>
 <p>答案是，<strong>可以的</strong>。</p>
-<p>當你上大學 <!-- raw HTML omitted -->聽說<!-- raw HTML omitted --> 可以用群論之類的東西去證明</p>
+<p>當你上大學 <small>聽說</small> 可以用群論之類的東西去證明</p>
 <p>$\max, \min$ 操作其實可以跟 $+, -$ 組成一個叫做 ($\max/\min$) ($plus/sub$) matrix 的東西</p>
 <p>所以你只要把普通矩陣乘法中的 $\times$ 改成 $+$</p>
 <p>把普通矩陣乘法中的 $+$ 改成 $\max$</p>
 <p>那你就可以做出一個可以轉移本題轉移式的東西了!!!</p>
-<h2 id="回歸子題-4">回歸子題 4</h2>
+
+<h2 class="relative group">回歸子題 4
+    <div id="回歸子題-4" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%9b%9e%e6%ad%b8%e5%ad%90%e9%a1%8c-4" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>這個子題只是給不會線段樹單點修改的人寫的</p>
 <p>雖然有點引導往區間查詢的方向想</p>
 <p>但相信能想到 max-plus matrix 的人應該可以瞬間刻完線段樹</p>
 <p>所以拿分上應該是會跟滿分一起拿的子題，純純引導而已ww</p>
-<h2 id="滿分解">滿分解</h2>
+
+<h2 class="relative group">滿分解
+    <div id="滿分解" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%bb%bf%e5%88%86%e8%a7%a3" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>痾下面為了方便，不失一般性的定義 $M = 5$</p>
 <p>我們先定義一個基礎狀態的小小矩陣</p>
 <p>可以想像我們現在狀態是一個長方形</p>
 <p>他有著</p>
-<p>$$
-now =
+$$
+now = 
 \left[
 \begin{matrix}
-dp_{i-1} &amp; dp_{i-2} &amp; dp_{i-3} &amp; dp_{i-4} &amp; dp_{i-5}
+dp_{i-1} & dp_{i-2} & dp_{i-3} & dp_{i-4} & dp_{i-5}
 \end{matrix}
 \right]
-$$</p>
-<p>那麼我們只要乘上一個轉移矩陣 $T$</p>
+$$<p>那麼我們只要乘上一個轉移矩陣 $T$</p>
 <p>是否就可以拿到</p>
-<p>$$
-nxt =
+$$
+nxt = 
 \left[
 \begin{matrix}
-dp_{i} &amp; dp_{i-1} &amp; dp_{i-2} &amp; dp_{i-3} &amp; dp_{i-4}
+dp_{i} & dp_{i-1} & dp_{i-2} & dp_{i-3} & dp_{i-4}
 \end{matrix}
 \right]
-$$</p>
-<p>好好好，那我們來通靈一下轉移矩陣 $T$!</p>
+$$<p>好好好，那我們來通靈一下轉移矩陣 $T$!</p>
 <p>我們目標要使得 $now \times T = nxt$</p>
 <p>$T$ 在右邊(因為矩陣乘法擺左右會不一樣，要小心)</p>
 <p>痾 我們記得先想起來我們的矩陣乘法形式是 $max-plus$ matrix 喔</p>
@@ -327,338 +1275,334 @@ $\text{now&rsquo;s } dp_{i-1} \to \text{nxt&rsquo;s } dp_{i}$
 $\text{now&rsquo;s } dp_{i-2} \to \text{nxt&rsquo;s } dp_{i-1}$
 以此類推</p>
 <p>所以可以先填格子上去!</p>
-<p>$$
-T =
+$$
+T = 
 \left[
 \begin{matrix}
-?? &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\\
-?? &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\\
-?? &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\\
-?? &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0\\
-?? &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty
+    ?? & 0 & -\infty & -\infty & -\infty\\\\
+    ?? & -\infty & 0 & -\infty & -\infty\\\\
+    ?? & -\infty & -\infty & 0 & -\infty\\\\
+    ?? & -\infty & -\infty & -\infty & 0\\\\
+    ?? & -\infty & -\infty & -\infty & -\infty
 \end{matrix}
 \right]
-$$</p>
-<p>那我們要怎麼填左邊那一列格子呢?</p>
+$$<p>那我們要怎麼填左邊那一列格子呢?</p>
 <p>我們先定義 $now \to nxt$，$nxt$ 為第 $i$ 堂課，因為跟 $a_i, \beta_i$ 有關</p>
 <p>那麼從 $\text{now&rsquo;s } dp_{i-1} \to \text{nxt&rsquo;s } dp_{i}$</p>
 <p>是不是就是</p>
-<p>$$
-\text{nxt&rsquo;s } dp_{i} = \max(\text{nxt&rsquo;s } dp_{i}, \text{now&rsquo;s } dp_{i-1} + \alpha_{1} \times \beta_{i} + a_{i})
-$$</p>
-<p>以此類推，就可以把填格子遊戲玩完了</p>
-<p>$$
-T =
+$$
+\text{nxt's } dp_{i} = \max(\text{nxt's } dp_{i}, \text{now's } dp_{i-1} + \alpha_{1} \times \beta_{i} + a_{i})
+$$<p>以此類推，就可以把填格子遊戲玩完了</p>
+$$
+T = 
 \left[
 \begin{matrix}
-\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\\
-\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\\
-\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\\
-\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0\\
-\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty
+    \alpha_1 \times \beta_i + a_i & 0 & -\infty & -\infty & -\infty\\\\
+    \alpha_2 \times \beta_i + a_i & -\infty & 0 & -\infty & -\infty\\\\
+    \alpha_3 \times \beta_i + a_i & -\infty & -\infty & 0 & -\infty\\\\
+    \alpha_4 \times \beta_i + a_i & -\infty & -\infty & -\infty & 0\\\\
+    \alpha_5 \times \beta_i + a_i & -\infty & -\infty & -\infty & -\infty
 \end{matrix}
 \right]
-$$</p>
-<p>嗎?</p>
+$$<p>嗎?</p>
 <p>發現不太對勁欸，我們好像少了某些東西!</p>
 <p>我們能從任意起點開始</p>
 <p>也就是說 $DP$ 式中的 $dp = max(a_i)$ 我們根本沒有算到!!!</p>
 <p>但我們能在矩陣中做到這個東西嗎?</p>
 <p>我們發現我們可以在矩陣中偷偷塞入一個神奇的 $0$!!!</p>
-<p>$$
-now =
+$$
+now = 
 \left[
 \begin{matrix}
-dp_{i-1} &amp; dp_{i-2} &amp; dp_{i-3} &amp; dp_{i-4} &amp; dp_{i-5} &amp; 0
+dp_{i-1} & dp_{i-2} & dp_{i-3} & dp_{i-4} & dp_{i-5} & 0
 \end{matrix}
 \right]
-$$</p>
-<p>$$
-nxt =
+$$$$
+nxt = 
 \left[
 \begin{matrix}
-dp_{i} &amp; dp_{i-1} &amp; dp_{i-2} &amp; dp_{i-3} &amp; dp_{i-4} &amp; 0
+dp_{i} & dp_{i-1} & dp_{i-2} & dp_{i-3} & dp_{i-4} & 0
 \end{matrix}
 \right]
-$$</p>
-<p>轉移矩陣最後就變成了</p>
-<p>$$
-T =
+$$<p>轉移矩陣最後就變成了</p>
+$$
+T = 
 \left[
 \begin{matrix}
-\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty\\
-\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty\\
-\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty\\
-\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty\\
-\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty\\
-a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0
+    \alpha_1 \times \beta_i + a_i & 0 & -\infty & -\infty & -\infty & -\infty\\\\
+    \alpha_2 \times \beta_i + a_i & -\infty & 0 & -\infty & -\infty & -\infty\\\\
+    \alpha_3 \times \beta_i + a_i & -\infty & -\infty & 0 & -\infty & -\infty\\\\
+    \alpha_4 \times \beta_i + a_i & -\infty & -\infty & -\infty & 0 & -\infty\\\\
+    \alpha_5 \times \beta_i + a_i & -\infty & -\infty & -\infty & -\infty & -\infty\\\\
+    a_i & -\infty & -\infty & -\infty & -\infty & 0
 \end{matrix}
 \right]
-$$</p>
-<p>挖 我們就真的把整個矩陣轉移推出來了</p>
+$$<p>挖 我們就真的把整個矩陣轉移推出來了</p>
 <p>嗎?</p>
 <p>我們發現我們還得紀錄每個結束點的最大值欸</p>
 <p>怎麼這麼爛阿唉唉唉</p>
 <p>不過聰明的你一定想到了!</p>
 <p>我們再把答案丟進去矩陣中就行了阿!!!</p>
-<p>$$
-now =
+$$
+now = 
 \left[
 \begin{matrix}
-dp_{i-1} &amp; dp_{i-2} &amp; dp_{i-3} &amp; dp_{i-4} &amp; dp_{i-5} &amp; 0 &amp; ans_{i-1}
+dp_{i-1} & dp_{i-2} & dp_{i-3} & dp_{i-4} & dp_{i-5} & 0 & ans_{i-1}
 \end{matrix}
 \right]
-$$</p>
-<p>$$
-nxt =
+$$$$
+nxt = 
 \left[
 \begin{matrix}
-dp_{i} &amp; dp_{i-1} &amp; dp_{i-2} &amp; dp_{i-3} &amp; dp_{i-4} &amp; 0 &amp; ans_i
+dp_{i} & dp_{i-1} & dp_{i-2} & dp_{i-3} & dp_{i-4} & 0 & ans_i
 \end{matrix}
 \right]
-$$</p>
-<p>$$
-T =
+$$$$
+T = 
 \left[
 \begin{matrix}
-\alpha_1 \times \beta_i + a_i &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_1 \times \beta_i + a_i\\
-\alpha_2 \times \beta_i + a_i &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_2 \times \beta_i + a_i\\
-\alpha_3 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; -\infty &amp; \alpha_3 \times \beta_i + a_i\\
-\alpha_4 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; -\infty &amp; \alpha_4 \times \beta_i + a_i\\
-\alpha_5 \times \beta_i + a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; \alpha_5 \times \beta_i + a_i\\
-a_i &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0 &amp; a_i\\
--\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; -\infty &amp; 0
+    \alpha_1 \times \beta_i + a_i & 0 & -\infty & -\infty & -\infty & -\infty & \alpha_1 \times \beta_i + a_i\\\\
+    \alpha_2 \times \beta_i + a_i & -\infty & 0 & -\infty & -\infty & -\infty & \alpha_2 \times \beta_i + a_i\\\\
+    \alpha_3 \times \beta_i + a_i & -\infty & -\infty & 0 & -\infty & -\infty & \alpha_3 \times \beta_i + a_i\\\\
+    \alpha_4 \times \beta_i + a_i & -\infty & -\infty & -\infty & 0 & -\infty & \alpha_4 \times \beta_i + a_i\\\\
+    \alpha_5 \times \beta_i + a_i & -\infty & -\infty & -\infty & -\infty & -\infty & \alpha_5 \times \beta_i + a_i\\\\
+    a_i & -\infty & -\infty & -\infty & -\infty & 0 & a_i\\\\
+    -\infty & -\infty & -\infty & -\infty & -\infty & -\infty & 0
 \end{matrix}
 \right]
-$$</p>
-<p>我們就全部做完這題了!!!</p>
-<h2 id="實作">實作</h2>
+$$<p>我們就全部做完這題了!!!</p>
+
+<h2 class="relative group">實作
+    <div id="實作" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%af%a6%e4%bd%9c" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>因為實作能力非常重要</p>
 <p>所以請自己努力練實作，這邊就不放 code 了</p>
 <p>假如真的寫不出來的可以私訊我，或者偷偷開 admin 帳號跑去 TOJ 上面看我的 code 都行 :)</p>
-<h2 id="結語">結語</h2>
+
+<h2 class="relative group">結語
+    <div id="結語" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e7%b5%90%e8%aa%9e" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>這是一題完全科技沒有思考的題目</p>
 <p>畢竟我就是這種超級爛只會實作的選手</p>
 <p>但是相信大家也可以從實作中摸索出解題的技巧</p>
 <p>我覺得該題最有趣的應該是 matrix 的建構過程</p>
 <p>我已經盡量將我當初思考的步驟還原出來了</p>
-<p><!-- raw HTML omitted --><strong>hope u guys enjoy it !</strong><!-- raw HTML omitted --></p>
-<h2 id="臭一下">臭一下</h2>
+<p><big><strong>hope u guys enjoy it !</strong></big></p>
+
+<h2 class="relative group">臭一下
+    <div id="臭一下" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e8%87%ad%e4%b8%80%e4%b8%8b" aria-label="定位點">#</a>
+    </span>
+    
+</h2>
 <p>現場打比賽的人真的要檢討一下</p>
 <p>只要會讀題目 + 寫正常的 dp 式就能拿到 $54$ 分</p>
 <p>不要被題目嚇到了，有時候子題超好拿，你還不拿，根本自己嗆自己</p>
-</div>
-            </div>
+
+          
+          
+          
         </div>
+        
+        
 
-        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+        
+
+        
+  
+  
+
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/post/contest/nccu/nccu/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;2025全國賽心得
+              </span>
+            </a>
             
-
-            <div class="layui-card single-card">
-                <h2 class="single-title">Recent Posts</h2>
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-14T19:11:14&#43;08:00">December 14, 2025</time>
+              </span>
             
-                
-                <div style="margin-left: 10px;">
-                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-                    <a href="/post/atcoder/abc150e/">
-                        <h3 class="">ABC150 E - Change a Little Bit</h3>
-                    </a>
-                    <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2026-03-06</span>
-
-    
-    
-
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/atcoder/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Atcoder</span>
-        </a>
-    
-        <a href="/tags/math/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
-        </a>
-    
-        <a href="/tags/combination/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Combination</span>
-        </a>
-    
-        <a href="/tags/generation-function/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Generation Function</span>
-        </a>
-    
-    
-</h3>
-
-                    </blockquote>
-                </div>
-                
-                <div style="margin-left: 10px;">
-                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-                    <a href="/post/toj/toj772/">
-                        <h3 class="">TOJ 772 神魔之塔</h3>
-                    </a>
-                    <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2026-02-17</span>
-
-    
-    
-
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/toj/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">TOJ</span>
-        </a>
-    
-        <a href="/tags/math/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
-        </a>
-    
-    
-</h3>
-
-                    </blockquote>
-                </div>
-                
-                <div style="margin-left: 10px;">
-                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-                    <a href="/post/atcoder/abc168e/">
-                        <h3 class="">ABC168 E - ∙ (Bullet)</h3>
-                    </a>
-                    <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2026-01-06</span>
-
-    
-    
-
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/atcoder/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Atcoder</span>
-        </a>
-    
-        <a href="/tags/solution/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Solution</span>
-        </a>
-    
-        <a href="/tags/vector/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Vector</span>
-        </a>
-    
-        <a href="/tags/math/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Math</span>
-        </a>
-    
-        <a href="/tags/geometry/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Geometry</span>
-        </a>
-    
-    
-</h3>
-
-                    </blockquote>
-                </div>
-                
-                <div style="margin-left: 10px;">
-                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-                    <a href="/post/tutorial/flow/flow-algorithm/">
-                        <h3 class="">Flow Algorithm</h3>
-                    </a>
-                    <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2026-01-05</span>
-
-    
-    
-
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/tutorial/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
-        </a>
-    
-        <a href="/tags/flow/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
-        </a>
-    
-    
-</h3>
-
-                    </blockquote>
-                </div>
-                
-                <div style="margin-left: 10px;">
-                    <blockquote class="self-elem-quote self-elem-quote-bg-red" style="background-color:#FFFFFF;margin-top: 10px;">
-                    <a href="/post/tutorial/flow/intro/">
-                        <h3 class="">網路流入門</h3>
-                    </a>
-                    <h3 style="margin-top:10px; margin-bottom:10px"> 
-    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2026-01-04</span>
-
-    
-    
-
-    
-
-    
-    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
-    
-
-    
-        <a href="/tags/tutorial/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Tutorial</span>
-        </a>
-    
-        <a href="/tags/flow/">
-            <span class="layui-badge layui-bg-green" style="vertical-align: 2px;">Flow</span>
-        </a>
-    
-    
-</h3>
-
-                    </blockquote>
-                </div>
-                
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/post/atcoder/abc345f/">
+              <span class="leading-6">
+                ABC345 F - Many Lamps&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
             
-            <br />
-            </div>
-        </div>
-
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2025-12-17T19:11:14&#43;08:00">December 17, 2025</time>
+              </span>
+            
+          
+        </span>
+      </div>
     </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="捲動到頁頂"
+    title="捲動到頁頂">
+    &uarr;
+  </a>
 </div>
 
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      
+      
+        
+          
+          
+      
+      
+      
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400 ">
+        <ul class="flex list-none flex-col sm:flex-row">
+          
+            <li class=" flex mb-1 text-end sm:mb-0 sm:me-7 sm:last:me-0 ">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/index.xml"
+                title="">
+                
+                RSS
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Blameazu
+      </p>
+    
 
-        </div><footer>
     
     
-    <div class="layui-container">
-        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
-    </div>
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        以 <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a> 製作
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
 </footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="搜尋"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="關閉 (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
-</body>
+    </div>
+  </body>
+  
 </html>

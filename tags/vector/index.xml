@@ -6,14 +6,18 @@
     <description>Recent content in Vector on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 06 Jan 2026 10:25:49 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/vector/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Blameazu</copyright>
+    <lastBuildDate>Tue, 06 Jan 2026 10:25:49 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/vector/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>ABC168 E - ∙ (Bullet)</title>
       <link>http://localhost:1313/post/atcoder/abc168e/</link>
       <pubDate>Tue, 06 Jan 2026 10:25:49 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/atcoder/abc168e/</guid>
-      <description>題目連結 ABC 168 E&#xA;題目 今天有 $N$ 個沙丁魚要放進去冰箱裡面&#xA;定義 丁魚 $i$ 與 丁魚 $j$ 會吵架是 $A_i \times A_j + B_i \times B_j = 0$&#xA;你需要求出有多少種放法，使得放在冰箱裡的丁魚們之間無任意兩者會吵架&#xA;冰箱裡至少需要放 $1$ 隻&#xA;$1 \le N \le 2 \times 10^5$&#xA;$-10^{18} \le A_i, B_i \le 10^{18}$&#xA;題解 觀察 這題假如有學過高中數學的向量單元，應該可以很輕易地看出來 $A_i \times A_j + B_i \times B_j$ 很像內積&#xA;所以我們可以假設每個沙丁魚的 $(A_i, B_i)$ 為二維平面上面的座標向量&#xA;那麼我們就可以知道，當兩隻沙丁魚會吵架&#xA;那麼必定是他們與原點的方向向量垂直!!!&#xA;轉換為數學模型 所以我們就先把相互垂直的直線綁在一起看!&#xA;我們會發現除了這兩個互相垂直的直線&#xA;其他的直線與他們是沒有關聯的&#xA;所以答案就是每一組的答案相乘&#xA;那麼我們仔細看每一組自己本身的答案是多少&#xA;假設直線 $L$ 擁有 $A$ 個點&#xA;直線 $L&amp;rsquo;$ 擁有 $B$ 個點</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc168/tasks/abc168_e&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 168 E&lt;/a&gt;&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>

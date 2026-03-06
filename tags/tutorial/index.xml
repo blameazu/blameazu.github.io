@@ -6,21 +6,28 @@
     <description>Recent content in Tutorial on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 05 Jan 2026 14:05:39 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Blameazu</copyright>
+    <lastBuildDate>Mon, 05 Jan 2026 14:05:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
     <item>
       <title>Flow Algorithm</title>
       <link>http://localhost:1313/post/tutorial/flow/flow-algorithm/</link>
       <pubDate>Mon, 05 Jan 2026 14:05:39 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/tutorial/flow/flow-algorithm/</guid>
-      <description>前言 這篇來介紹怎麼使用演算法來解決 最大流問題&#xA;先備知識 知道 flow 是啥&#xA;知道 flow 在圖上大概長怎樣&#xA;管道逆流 等等會提到一個很關鍵的步驟是管道逆流&#xA;也就是說當有一條水管 $u \to v$&#xA;被流過去 $f$ 這條水量時&#xA;我們允許 $v \to u$ 多逆流回去 $f$&#xA;而詳細的操作應該是&#xA;當有一條容量為 $C$ 的水管 $u \to v, v \to u$&#xA;那麼當 $u \to v$ 是 $A$，$v \to u$ 是 $B$ 時&#xA;當 $u \to v$ 多流 $x$ 的時候， $v \to u$ 應該就要減少流量 $x$&#xA;這樣就確保 $\vert A - B \vert \le C$&#xA;Fulkerson Ford 方法 這是一種方法，不是一種演算法!</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;前言&#xA;    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;這篇來介紹怎麼使用演算法來解決 最大流問題&lt;/p&gt;</description>
+      
     </item>
+    
     <item>
       <title>網路流入門</title>
       <link>http://localhost:1313/post/tutorial/flow/intro/</link>
       <pubDate>Sun, 04 Jan 2026 20:02:27 +0800</pubDate>
+      
       <guid>http://localhost:1313/post/tutorial/flow/intro/</guid>
-      <description>什麼是網路流? 在圖論中，用於解決網路(Network) 這種特殊的有向圖的特殊算法。&#xA;阿因為 flow 聽起來很帥、很複雜，所以通常打 OI 的人都會把他丟到很後面才學。&#xA;最近 IOI 說會考一般的流，所以應該要學起來。&#xA;網路流的基礎定義 一張有向圖符合以下性質，我們可以稱之為網路 (Network)&#xA;擁有一個源點 $S$，水量無限大 擁有一個匯點 $T$ $S \neq T$ 圖中每條邊皆有非負權重 $C$，代表著這條管道的上限、容量 我們可以想像這張圖上的邊為水管，而點是他們的交會處。&#xA;那麼水管必定有他的上限，且水管中的水不一定會流滿。&#xA;源點就是水龍頭的源頭，會一直冒水。&#xA;匯點就是你家浴室的排水孔，水進去就流走了。&#xA;然後根據質量守恆定律(?)，水不會憑空消失，所以除了源點、匯點外，不應該要有水憑空出現/消失。&#xA;阿我們所想要知道的就是要怎麼安排一種流法，使得他們在流水的時候達到最佳&#xA;更明確的定義應該如下:&#xA;對於網路 $G$ 來說，流是指一種流通方法，必須滿足以下條件&#xA;每條邊的流量不能大於該條邊的容量，也就是 $f(a, b) \le C(a, b)$ 除了源點 $S$、匯點 $T$ 來說，其他的點應該都要符合進去的流量 = 出去的流量 源點只有出邊，匯點只有入邊 網路流可以幹嘛? 將問題轉換成流模型，通常可以獲得性質，或者可以直接拿 flow 的演算法去解決。&#xA;而且 flow 擁有很多很酷的引理，通常實際應用問題會跟 dp 一樣花樣多變，有時候根本不知道是流問題。&#xA;最大流 最大流的定義是在上述幾個流的規則中(容量限制、水量守恆下)，匯點可以收集到最大的水量的一種設計流量方法。&#xA;我們就稱之為最大流。&#xA;所以有時會有很多種方法皆為最大流。</description>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;什麼是網路流?&#xA;    &lt;div id=&#34;什麼是網路流&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e4%bb%80%e9%ba%bc%e6%98%af%e7%b6%b2%e8%b7%af%e6%b5%81&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;在圖論中，用於解決網路(Network) 這種特殊的有向圖的特殊算法。&lt;/p&gt;</description>
+      
     </item>
+    
   </channel>
 </rss>
