@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Combination on Blame&#39;s Blog</title>
+    <link>http://localhost:1313/tags/combination/</link>
+    <description>Recent content in Combination on Blame&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/combination/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ABC150 E - Change a Little Bit</title>
+      <link>http://localhost:1313/post/atcoder/abc150e/</link>
+      <pubDate>Fri, 06 Mar 2026 16:56:39 +0800</pubDate>
+      <guid>http://localhost:1313/post/atcoder/abc150e/</guid>
+      <description>題目連結 ABC 150 E&#xA;題目 今天有兩個長度為 $N$ 的 01 序列 $S$ 跟 $T$&#xA;定義一次操作為&#xA;選擇 $S$ 的一個位置 $i$&#xA;花費 $C_i \times D$，$D$ 是 $(S_j \neq T_j, \forall 1 \le j \le N)$ 的個數，翻轉 $S_i$ ($0 \to 1, 1 \to 0$)&#xA;定義函數 $f(S, T)$ 代表著序列 $S$ 經過一系列操作後等於序列 $T$ 的最小花費是多少。&#xA;總共會有 $2^{N} \times (2^{N}-1)$ 的 $f(S, T)$ 組合，計算 $\sum f(S, T) \pmod {10^9+7}$，也就是所有情況的最小花費總和模上 $10^9+7$&#xA;$1 \le N \le 2 \times 10^5$&#xA;$1 \le C_i \le 10^9$</description>
+    </item>
+  </channel>
+</rss>

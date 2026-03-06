@@ -9,11 +9,11 @@
     <lastBuildDate>Tue, 17 Feb 2026 17:19:16 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/toj/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>TOJ772</title>
+      <title>TOJ 772 神魔之塔</title>
       <link>http://localhost:1313/post/toj/toj772/</link>
       <pubDate>Tue, 17 Feb 2026 17:19:16 +0800</pubDate>
       <guid>http://localhost:1313/post/toj/toj772/</guid>
-      <description>題目連結 TOJ 772 神魔之塔</description>
+      <description>題目連結 TOJ 772 神魔之塔&#xA;前言 這題是我高二時後的校內複選題目&#xA;但我過了一年才把他學起來&#xA;事實證明數論知識欠缺，數學菜雞&#xA;by the way，高二複選的時候我比賽有 AC 這題&#xA;只是是暴力假解，幹&#xA;題目 題目敘述 題敘又臭又長(但比賽的時候認真看題敘也是一門技巧)&#xA;以下是簡短的題敘&#xA;給你 $m$ 個元素的集合 $C$&#xA;定義&#xA;$$ v[i] = \prod^{i-1}_{j = 1} gcd(i, j)^j[gcd(i, j) \in C], \forall 1 \le i \le n $$&#xA;給 $q$ 筆操作，每次給 $l, r$&#xA;詢問&#xA;$$ \prod^{r}_{k = l} v[k] \pmod{998244353} $$&#xA;$1 \le n, q \le 10^5$ $1 \le m \le 100$ 先來拆解問題 首先我們發現，我們沒有修改到 $v[i]$ 的值吧?&#xA;所以對於 $Q$ 筆詢問</description>
     </item>
     <item>
       <title>TOJ 1008 速通麥塊</title>
