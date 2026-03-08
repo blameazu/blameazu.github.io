@@ -241,25 +241,19 @@
   
   
     <style>
-  mjx-container[jax="SVG"][display="false"] { display: inline-block; }
-  mjx-container[jax="SVG"][display="true"] { display: block; margin: 0.85em 0; }
+   
+   
   mjx-container svg { display: inline; }
-  mjx-container[display="true"] svg { display: block; margin: 0 auto; }
+   
 </style>
 <script>
   MathJax = {
     tex: {
       inlineMath: [['$', '$'], ['\\(', '\\)']],
       displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      processEscapes: true,
-      processEnvironments: true,
-      tags: 'none'
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    },
-    startup: {
-      typeset: true
+      
+      
+      
     }
   };
 </script>
@@ -1154,7 +1148,7 @@
 <p>因為要在綠色的框框裡面 $(N-i)$ 挑 $D$ 個東西</p>
 <p>那式子是不是就變成了</p>
 $$
-\sum^{N}_{i=1} 2^N \times 2^{i-1} \times \sum^{N-i}\_{D=0} (\binom{N-i}{D} \times C_i \times (D+1))
+\sum^{N}_{i=1} 2^N \times 2^{i-1} \times \sum^{N-i}_{D=0} (\binom{N-i}{D} \times C_i \times (D+1))
 $$
 <h3 class="relative group">優化
     <div id="優化" class="anchor"></div>
@@ -1169,10 +1163,10 @@ $$
 <p>因為要算的複雜度高達 $O(N^2)$</p>
 <p>所以我們再整理一下式子</p>
 $$
-2^N \times \sum^{N}_{i=1} 2^{i-1} \times C_i \times \sum^{N-i}\_{D=0} (\binom{N-i}{D}  \times (D+1))
+2^N \times \sum^{N}_{i=1} 2^{i-1} \times C_i \times \sum^{N-i}_{D=0} (\binom{N-i}{D}  \times (D+1))
 $$<p>發現我們的瓶頸是卡在</p>
 $$
-\sum^{N-i}\_{D=0} (\binom{N-i}{D}  \times (D+1))
+\sum^{N-i}_{D=0} (\binom{N-i}{D}  \times (D+1))
 $$<p>那我們要怎麼算呢?</p>
 
 <h3 class="relative group">重頭戲 &mdash; 生成函數
@@ -1273,7 +1267,7 @@ $$
 <p>我們將答案算的差不多了</p>
 <p>我們知道了</p>
 $$
-\sum^{N-i}\_{D=0} (\binom{N-i}{D}  \times (D+1))
+\sum^{N-i}_{D=0} (\binom{N-i}{D}  \times (D+1))
 $$<p>就等於</p>
 $$
 (N-i + 2) \times 2^{N-i-1}
