@@ -7,7 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>© 2026 Blameazu</copyright>
-    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Mar 2026 00:58:47 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>證 $\sum_{d \mid n} \phi (d) = n$</title>
+      <link>http://localhost:1313/post/math/phidequaln/</link>
+      <pubDate>Thu, 19 Mar 2026 00:58:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/math/phidequaln/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;題目&#xA;    &lt;div id=&#34;題目&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;證&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2026 TOI 1! Day3</title>
+      <link>http://localhost:1313/post/toi/day3/</link>
+      <pubDate>Thu, 19 Mar 2026 00:25:35 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/toi/day3/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;早上&#xA;    &lt;div id=&#34;早上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a9%e4%b8%8a&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;早餐&#xA;    &lt;div id=&#34;早餐&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a9%e9%a4%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;吃玉米蛋餅 + 奶茶&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2026 TOI 1! Day2</title>
+      <link>http://localhost:1313/post/toi/day2/</link>
+      <pubDate>Wed, 18 Mar 2026 00:37:11 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/toi/day2/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;早上&#xA;    &lt;div id=&#34;早上&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e6%97%a9%e4%b8%8a&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;師大會館的冰箱&#xA;    &lt;div id=&#34;師大會館的冰箱&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%b8%ab%e5%a4%a7%e6%9c%83%e9%a4%a8%e7%9a%84%e5%86%b0%e7%ae%b1&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;很吵&amp;hellip;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>2026 TOI 1! Day1</title>
+      <link>http://localhost:1313/post/toi/day1/</link>
+      <pubDate>Mon, 16 Mar 2026 20:47:41 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/toi/day1/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;前言&#xA;    &lt;div id=&#34;前言&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%89%8d%e8%a8%80&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;三年只進過這次選訓&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>ABC150 E - Change a Little Bit</title>
@@ -96,6 +136,26 @@
       
       <guid>http://localhost:1313/post/contest/nccu/nccu/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;簡介&#xA;    &lt;div id=&#34;簡介&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e7%b0%a1%e4%bb%8b&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;全國賽應該是學科能力競賽的最終站&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>115學年台灣師範大學資工系特選心得</title>
+      <link>http://localhost:1313/post/college-application/ntnu/</link>
+      <pubDate>Fri, 12 Dec 2025 19:11:16 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/college-application/ntnu/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;為啥想報台師大&#xA;    &lt;div id=&#34;為啥想報台師大&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e7%82%ba%e5%95%a5%e6%83%b3%e5%a0%b1%e5%8f%b0%e5%b8%ab%e5%a4%a7&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;因為想要練面試，阿因為我沒有像 charhao 那樣是中字輩殺手，所以我覺得中字輩會把我刷掉&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>115學年台灣清華大學資工系特選心得</title>
+      <link>http://localhost:1313/post/college-application/nthu/</link>
+      <pubDate>Fri, 12 Dec 2025 19:11:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/college-application/nthu/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;動機&#xA;    &lt;div id=&#34;動機&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e5%8b%95%e6%a9%9f&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;因為清華是頂大，所以想讀&lt;/p&gt;</description>
       
     </item>
     
