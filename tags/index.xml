@@ -40,16 +40,6 @@
     </item>
     
     <item>
-      <title>TOI</title>
-      <link>http://localhost:1313/tags/toi/</link>
-      <pubDate>Thu, 19 Mar 2026 00:25:35 +0800</pubDate>
-      
-      <guid>http://localhost:1313/tags/toi/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Atcoder</title>
       <link>http://localhost:1313/tags/atcoder/</link>
       <pubDate>Fri, 06 Mar 2026 16:56:39 +0800</pubDate>
@@ -195,16 +185,6 @@
       <pubDate>Sun, 14 Dec 2025 19:11:14 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/experience/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>特選</title>
-      <link>http://localhost:1313/tags/%E7%89%B9%E9%81%B8/</link>
-      <pubDate>Fri, 12 Dec 2025 19:11:16 +0800</pubDate>
-      
-      <guid>http://localhost:1313/tags/%E7%89%B9%E9%81%B8/</guid>
       <description></description>
       
     </item>
