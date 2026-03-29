@@ -228,7 +228,7 @@
     "keywords": ["Math","Prove","Phi"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "549"
+    "wordCount": "720"
   }]
   </script>
 
@@ -734,7 +734,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-03-19T00:58:47&#43;08:00">March 19, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>549 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">2 分鐘</span>
+      <time datetime="2026-03-19T00:58:47&#43;08:00">March 19, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>720 字</span><span class="px-2 text-primary-500">&middot;</span><span title="預計閱讀時間">2 分鐘</span>
     
 
     
@@ -945,10 +945,16 @@
     </span>
     
 </h2>
-<p>證</p>
+
+<div class="bf-box bf-problem">
+  <div class="bf-box__header">Problem</div>
+  <div class="bf-box__body"><p>證</p>
 $$
 \sum_{d \mid n} \phi (d) = n
-$$
+$$</div>
+</div>
+
+
 <h2 class="relative group">題解
     <div id="題解" class="anchor"></div>
     
@@ -968,8 +974,7 @@ $$
     </span>
     
 </h3>
-<p>首先我們看到 $\phi$ 會記起來他是積性函數</p>
-<p>也就是說</p>
+<p>$\phi$ 是甚麼?</p>
 $$
 \phi(i) =
 \begin{cases}
@@ -979,6 +984,10 @@ $$
 \end{cases}
 $$<p>所以我們更喜歡 $\phi(n)$，假如 $n$ 是質數的話</p>
 <p>因為 $n$ 是質數的話，$\phi(n) = n-1$</p>
+<p>$\phi$ 也是積性函數</p>
+<p>也就是</p>
+<p>假如 $gcd(a, b) = 1$</p>
+<p>那 $\phi(a \times b) = \phi(a) \times \phi(b)$</p>
 
 <h3 class="relative group">簡化
     <div id="簡化" class="anchor"></div>
@@ -1053,7 +1062,35 @@ $$<p>了</p>
 $$
 \sum_{d \mid n} \phi (d) \\
 = \prod^{l}_{i=1} (1 + (p_i -1) + ((p_i -1) \times p_i) + \ldots + ((p_i -1 ) \times {p_i}^{k_i-1}))
-$$<p>再用等比級數算一下</p>
+$$
+
+<details class="bf-spoiler" >
+  <summary class="bf-spoiler__summary">大概怎麼得出來的</summary>
+  <div class="bf-spoiler__body"><p>可以從一個小問題來得出來</p>
+<div class="bf-box bf-problem">
+  <div class="bf-box__header">Problem</div>
+  <div class="bf-box__body">求 $n$ 的所有正因數和</div>
+</div>
+<p>他已經是一個經典算式了</p>
+<p>長成</p>
+$$
+Ans = 
+(1 + p_1 + p_1^2 + \ldots + p_1^{k_1}) \times 
+(1 + p_2 + p_2^2 + \ldots + p_2^{k_2}) \times
+\ldots
+(1 + p_l + p_l^2 + \ldots + p_l^{k_l})
+$$<p>所以我們可以把上面的式子改成</p>
+$$
+Ans = 
+(\phi(p_1^0) + \phi(p_1^1) + \phi(p_1^2) + \ldots + \phi(p_1^{k_1})) \times 
+(\phi(p_2^0) + \phi(p_2^1) + \phi(p_2^2) + \ldots + \phi(p_2^{k_2})) \times
+\ldots
+(\phi(p_l^0) + \phi(p_l^1) + \phi(p_l^2) + \ldots + \phi(p_l^{k_l}))
+$$<p>阿因為剛剛說的 $\phi$ 是積性函數(對於互質的可以相乘得到)，所以上面式子是對的</p>
+</div>
+</details>
+
+<p>再用等比級數算一下</p>
 $$
 \sum_{d \mid n} \phi (d) \\
 = \prod^{l}_{i=1} (1 + (p_i -1) \times (\frac{{p_i}^{k_i}-1}{p_i-1})) \\
@@ -2012,14 +2049,14 @@ $$<p>所以等於右式</p>
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/post/atcoder/abc150e/">
+              href="/post/toi/20261/">
               <span class="leading-6">
-                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;ABC150 E - Change a Little Bit
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;2026 TOI 1! 前半
               </span>
             </a>
             
               <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
-                <time datetime="2026-03-06T16:56:39&#43;08:00">March 6, 2026</time>
+                <time datetime="2026-03-16T20:47:41&#43;08:00">March 16, 2026</time>
               </span>
             
           
