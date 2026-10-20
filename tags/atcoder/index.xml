@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Atcoder on Blame&#39;s Blog</title>
-    <link>http://localhost:1313/tags/atcoder/</link>
+    <link>https://blameazu.github.io/tags/atcoder/</link>
     <description>Recent content in Atcoder on Blame&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <copyright>© 2026 Blameazu</copyright>
-    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Mar 2026 16:56:39 +0800</lastBuildDate><atom:link href="https://blameazu.github.io/tags/atcoder/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ABC150 E - Change a Little Bit</title>
-      <link>http://localhost:1313/post/atcoder/abc150e/</link>
+      <link>https://blameazu.github.io/post/atcoder/abc150e/</link>
       <pubDate>Fri, 06 Mar 2026 16:56:39 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/atcoder/abc150e/</guid>
+      <guid>https://blameazu.github.io/post/atcoder/abc150e/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc150/tasks/abc150_e&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 150 E&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>ABC168 E - ∙ (Bullet)</title>
-      <link>http://localhost:1313/post/atcoder/abc168e/</link>
+      <link>https://blameazu.github.io/post/atcoder/abc168e/</link>
       <pubDate>Tue, 06 Jan 2026 10:25:49 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/atcoder/abc168e/</guid>
+      <guid>https://blameazu.github.io/post/atcoder/abc168e/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc168/tasks/abc168_e&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 168 E&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>ABC433 F - 1122 Subsequence 2</title>
-      <link>http://localhost:1313/post/atcoder/abc433f/</link>
+      <link>https://blameazu.github.io/post/atcoder/abc433f/</link>
       <pubDate>Fri, 02 Jan 2026 08:26:44 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/atcoder/abc433f/</guid>
+      <guid>https://blameazu.github.io/post/atcoder/abc433f/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;題目&#xA;    &lt;div id=&#34;題目&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&#xA;&lt;div class=&#34;bf-box bf-problem&#34;&gt;&#xA;  &lt;div class=&#34;bf-box__header&#34;&gt;ABC433 F - 1122 Subsequence 2&lt;/div&gt;&#xA;  &lt;div class=&#34;bf-box__body&#34;&gt;&lt;p&gt;定義 字串 $T$ 為一個 11-22 字串需符合以下條件&lt;/p&gt;</description>
       
     </item>
     
     <item>
       <title>ABC345 F - Many Lamps</title>
-      <link>http://localhost:1313/post/atcoder/abc345f/</link>
+      <link>https://blameazu.github.io/post/atcoder/abc345f/</link>
       <pubDate>Wed, 17 Dec 2025 19:11:14 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/atcoder/abc345f/</guid>
+      <guid>https://blameazu.github.io/post/atcoder/abc345f/</guid>
       <description>&lt;h2 class=&#34;relative group&#34;&gt;題目連結&#xA;    &lt;div id=&#34;題目連結&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#%e9%a1%8c%e7%9b%ae%e9%80%a3%e7%b5%90&#34; aria-label=&#34;定位點&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://atcoder.jp/contests/abc345/tasks/abc345_f&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;ABC 345 F&lt;/a&gt;&lt;/p&gt;</description>
       
     </item>

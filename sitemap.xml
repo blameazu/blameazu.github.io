@@ -3,67 +3,71 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://blameazu.github.io/</loc>
+    <lastmod>2026-10-21T02:55:07+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://blameazu.github.io/post/</loc>
+    <lastmod>2026-10-21T02:55:07+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://blameazu.github.io/post/tutorial/complexity/</loc>
+    <lastmod>2026-10-21T02:55:07+08:00</lastmod>
+  </url>
+  <url>
+    <loc>https://blameazu.github.io/post/college-application/toi/</loc>
     <lastmod>2026-08-13T02:23:24+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/</loc>
-    <lastmod>2026-08-13T02:23:24+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/post/college-application/toi/</loc>
-    <lastmod>2026-08-13T02:23:24+08:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:1313/post/college-application/exp/</loc>
+    <loc>https://blameazu.github.io/post/college-application/exp/</loc>
     <lastmod>2026-06-13T02:48:11+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/math/phidequaln/</loc>
+    <loc>https://blameazu.github.io/post/math/phidequaln/</loc>
     <lastmod>2026-03-19T00:58:47+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/toi/20261/</loc>
+    <loc>https://blameazu.github.io/post/toi/20261/</loc>
     <lastmod>2026-03-16T20:47:41+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/atcoder/abc150e/</loc>
+    <loc>https://blameazu.github.io/post/atcoder/abc150e/</loc>
     <lastmod>2026-03-06T16:56:39+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/toj/toj772/</loc>
+    <loc>https://blameazu.github.io/post/toj/toj772/</loc>
     <lastmod>2026-02-17T17:19:16+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/atcoder/abc168e/</loc>
+    <loc>https://blameazu.github.io/post/atcoder/abc168e/</loc>
     <lastmod>2026-01-06T10:25:49+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/tutorial/flow/flow-algorithm/</loc>
+    <loc>https://blameazu.github.io/post/tutorial/flow/flow-algorithm/</loc>
     <lastmod>2026-01-05T14:05:39+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/tutorial/flow/intro/</loc>
+    <loc>https://blameazu.github.io/post/tutorial/flow/intro/</loc>
     <lastmod>2026-01-04T20:02:27+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/atcoder/abc433f/</loc>
+    <loc>https://blameazu.github.io/post/atcoder/abc433f/</loc>
     <lastmod>2026-01-02T08:26:44+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/atcoder/abc345f/</loc>
+    <loc>https://blameazu.github.io/post/atcoder/abc345f/</loc>
     <lastmod>2025-12-17T19:11:14+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/toj/toj1008/</loc>
+    <loc>https://blameazu.github.io/post/toj/toj1008/</loc>
     <lastmod>2025-12-15T19:11:14+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/contest/nccu/nccu/</loc>
+    <loc>https://blameazu.github.io/post/contest/nccu/nccu/</loc>
     <lastmod>2025-12-14T19:11:14+08:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:1313/post/hello/intro/</loc>
+    <loc>https://blameazu.github.io/post/hello/intro/</loc>
     <lastmod>2025-12-08T19:11:14+08:00</lastmod>
   </url>
 </urlset>
